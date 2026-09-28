@@ -1,0 +1,13 @@
+regime B, gap 1.0 T, ssi trimmed 10% of the full frame (34% of the object's pixel count)
+p=[0.6 0.3 0.1]: obj1=0.1791, obj2=0.3162, obj3=0.3920, mean=0.2186, pointwise median=0.1791 | split of pointwise median [ 1.  0. -0.]
+    Adam from mean: loss 0.2146, split [0.643, 0.242, 0.115] (111s)
+    Adam from pointwise median: loss 0.1806, split [0.9999, 0.0002, -0.0001] (176s)
+p=[0.4  0.35 0.25]: obj1=0.2666, obj2=0.2919, obj3=0.3277, mean=0.2385, pointwise median=0.2323 | split of pointwise median [0.334 0.333 0.333]
+    Adam from mean: loss 0.2372, split [0.3667, 0.3427, 0.2906] (65s)
+    Adam from pointwise median: loss 0.2336, split [0.3352, 0.3309, 0.3339] (121s)
+p=[0.333 0.333 0.333]: obj1=0.2950, obj2=0.2986, obj3=0.2915, mean=0.2320, pointwise median=0.2318 | split of pointwise median [0.334 0.333 0.333]
+    Adam from mean: loss 0.2332, split [0.3345, 0.3315, 0.334] (211s)
+    Adam from pointwise median: loss 0.2336, split [0.3335, 0.3325, 0.334] (335s)
+p=[0.45 0.45 0.1 ]: obj1=0.2471, obj2=0.2482, obj3=0.3936, mean=0.2367, pointwise median=0.2339 | split of pointwise median [0.334 0.333 0.333]
+    Adam from mean: loss 0.2384, split [0.4513, 0.4439, 0.1048] (92s)
+    Adam from pointwise median: loss 0.2355, split [0.3433, 0.3304, 0.3263] (169s)

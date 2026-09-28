@@ -1,0 +1,4 @@
+# large regenerable outputs of the checks (maps and latents); the .json summaries and the logs are kept
+*.npy
+!gram.npy
+pilot_compat/pred/

@@ -1,0 +1,33 @@
+gauge = median; gap = 3.0 T, wall at 30.52; foreground share 0.291; object depth range 9.21
+(i) full-frame Gram: c = 2.422, gamma = +191.546 (gamma > 0 means a shared component dominates)
+    p=(+0.600, +0.300, +0.100)  LS-SSI-L2 optimum split = (+0.601, +0.299, +0.100)
+    p=(+0.400, +0.350, +0.250)  LS-SSI-L2 optimum split = (+0.400, +0.350, +0.250)
+    p=(+0.333, +0.333, +0.333)  LS-SSI-L2 optimum split = (+0.333, +0.333, +0.333)
+    p=(+0.450, +0.450, +0.100)  LS-SSI-L2 optimum split = (+0.450, +0.450, +0.100)
+(ii) normalised targets: median/MAD of raw full maps: [30.517 30.517 30.517] [8.8735 8.8736 8.8737]
+    p=(+0.600, +0.300, +0.100) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.05043 vs relaxed bound 0.05043; split=(+1.000, +0.000, -0.000)
+    p=(+0.400, +0.350, +0.250) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.06304 vs relaxed bound 0.06304; split=(+0.334, +0.333, +0.333)
+    p=(+0.333, +0.333, +0.333) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.06304 vs relaxed bound 0.06304; split=(+0.334, +0.333, +0.333)
+    p=(+0.450, +0.450, +0.100) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.06305 vs relaxed bound 0.06305; split=(+0.334, +0.333, +0.333)
+gauge = raw; gap = 1.0 T, wall at 8.07; foreground share 0.291; object depth range 14.99
+(i) full-frame Gram: c = 4.144, gamma = +52.238 (gamma > 0 means a shared component dominates)
+    p=(+0.600, +0.300, +0.100)  LS-SSI-L2 optimum split = (+0.545, +0.328, +0.128)
+    p=(+0.400, +0.350, +0.250)  LS-SSI-L2 optimum split = (+0.338, +0.360, +0.302)
+    p=(+0.333, +0.333, +0.333)  LS-SSI-L2 optimum split = (+0.273, +0.333, +0.394)
+    p=(+0.450, +0.450, +0.100)  LS-SSI-L2 optimum split = (+0.394, +0.482, +0.124)
+(ii) normalised targets: median/MAD of raw full maps: [8.074 8.074 8.074] [3.8389 4.6783 5.5189]
+    p=(+0.600, +0.300, +0.100) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.10428 vs relaxed bound 0.10428; split=(+1.000, +0.000, -0.000)
+    p=(+0.400, +0.350, +0.250) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.12547 vs relaxed bound 0.12546; split=(+0.309, +0.333, +0.358)
+    p=(+0.333, +0.333, +0.333) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.12222 vs relaxed bound 0.12221; split=(+0.309, +0.333, +0.358)
+    p=(+0.450, +0.450, +0.100) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.12953 vs relaxed bound 0.12952; split=(+0.309, +0.333, +0.358)
+gauge = median; gap = 0.1 T, wall at 5.40; foreground share 0.291; object depth range 9.21
+(i) full-frame Gram: c = 2.422, gamma = +5.434 (gamma > 0 means a shared component dominates)
+    p=(+0.600, +0.300, +0.100)  LS-SSI-L2 optimum split = (+0.636, +0.279, +0.086)
+    p=(+0.400, +0.350, +0.250)  LS-SSI-L2 optimum split = (+0.410, +0.351, +0.240)
+    p=(+0.333, +0.333, +0.333)  LS-SSI-L2 optimum split = (+0.333, +0.333, +0.333)
+    p=(+0.450, +0.450, +0.100)  LS-SSI-L2 optimum split = (+0.456, +0.456, +0.088)
+(ii) normalised targets: median/MAD of raw full maps: [5.402 5.402 5.402] [1.5734 1.5736 1.5737]
+    p=(+0.600, +0.300, +0.100) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.28437 vs relaxed bound 0.28437; split=(+1.000, +0.000, -0.000)
+    p=(+0.400, +0.350, +0.250) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.35549 vs relaxed bound 0.35548; split=(+0.334, +0.333, +0.333)
+    p=(+0.333, +0.333, +0.333) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.35550 vs relaxed bound 0.35550; split=(+0.334, +0.333, +0.333)
+    p=(+0.450, +0.450, +0.100) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.35556 vs relaxed bound 0.35556; split=(+0.334, +0.333, +0.333)

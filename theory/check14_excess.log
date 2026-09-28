@@ -1,0 +1,149 @@
+objects: bar slopes [[-0.5778, -0.5778, -0.5788], [-0.5778, -0.5778, -0.5788], [-0.5778, -0.5778, -0.5788]] (common slope -0.5781 per cube step)
+references: real-joint step r = [0.01   0.0007 0.0005], gap step g = [8.6702 8.661  8.6608], T = 5 sqrt3 = 8.6603; objects' MAD 2.1602
+invariance: e of the mean at p=(0.5,0.3,0.2) [0.5 0.3 0.2]; with map and references scaled by -2.5 and shifted separately [0.5 0.3 0.2]; map alone scaled by 2 [1.0012 0.6001 0.4001]
+
+(1) the three objects
+  object 1                                     native e = (+1.000, +0.000, +0.000)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) 
+                                               MAD    e = (+1.000, +0.000, +0.000)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) 
+  object 2                                     native e = (+0.000, +1.000, +0.000)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) 
+                                               MAD    e = (-0.000, +0.999, -0.000)  sum e = +0.999 | beta = (+1.00, +1.00, +1.00) 
+  object 3                                     native e = (+0.000, -0.000, +1.000)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) 
+                                               MAD    e = (+0.000, +0.000, +1.000)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) 
+
+(2) the mean sum_k p_k d_k (squared error, fixed targets: Prop. 1)
+  mean, p = [0.6, 0.3, 0.1]                    native e = (+0.600, +0.300, +0.100)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) 
+                                               MAD    e = (+1.193, +0.596, +0.199)  sum e = +1.987 | beta = (+1.98, +1.98, +1.99) 
+  mean, p = [0.5, 0.5, 0.0]                    native e = (+0.500, +0.500, +0.000)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) 
+                                               MAD    e = (+0.900, +0.899, +0.000)  sum e = +1.799 | beta = (+1.80, +1.80, +1.80) 
+  mean, p = [0.45, 0.45, 0.1]                  native e = (+0.450, +0.450, +0.100)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) 
+                                               MAD    e = (+1.020, +1.018, +0.226)  sum e = +2.264 | beta = (+2.26, +2.26, +2.27) 
+  mean, p = [0.4, 0.35, 0.25]                  native e = (+0.400, +0.350, +0.250)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) 
+                                               MAD    e = (+1.166, +1.018, +0.727)  sum e = +2.911 | beta = (+2.91, +2.91, +2.91) 
+  mean, p = [0.33, 0.33, 0.33]                 native e = (+0.333, +0.333, +0.333)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) 
+                                               MAD    e = (+1.021, +1.018, +1.018)  sum e = +3.058 | beta = (+3.05, +3.05, +3.06) 
+
+(3) the middle map (per-pixel absolute error, no majority: Prop. 5, Lemma 6)
+  middle of the median-centred objects         native e = (+0.334, +0.333, +0.333)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) 
+                                               MAD    e = (+1.022, +1.017, +1.019)  sum e = +3.058 | beta = (+3.05, +3.05, +3.06) 
+  middle of the objects as rendered (= object 2) native e = (+0.000, +1.000, +0.000)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) 
+
+(4) least-squares-aligned L2 optimum: top eigenvector w of diag(p) G (check2; scale and sign free)
+  LS-L2 optimum, p = [0.6, 0.3, 0.1]           MAD    e = (+0.905, -0.241, -0.040)  sum e = +0.625 | beta = (+0.62, +0.62, +0.63) w/sum|w| = [0.763, -0.203, -0.033]
+  LS-L2 optimum, p = [0.45, 0.45, 0.1]         MAD    e = (-0.747, +0.749, -0.000)  sum e = +0.001 | beta = (+0.00, +0.00, +0.00) w/sum|w| = [-0.499, 0.501, -0.0]
+  LS-L2 optimum, p = [0.4, 0.35, 0.25]         MAD    e = (+0.790, -0.539, -0.082)  sum e = +0.169 | beta = (+0.17, +0.17, +0.17) w/sum|w| = [0.56, -0.382, -0.058]
+  LS-L2 optimum, p = [0.33, 0.33, 0.33]        MAD    e = (-0.261, +0.747, -0.487)  sum e = -0.001 | beta = (+0.00, +0.00, +0.00) w/sum|w| = [-0.174, 0.5, -0.326]
+
+(5) check3b / check7 (object only, regime A): every Adam end, read at MAD scale. * = beats every object, so the
+    best map found is not an object; otherwise the best map found is the best object (sum e = 1, beta = 1)
+  dav2 p=[0.33, 0.33, 0.33]: best object obj3 1.4673
+    Adam from best_halfbar                     MAD    e = (+0.001, +0.001, +0.999)  sum e = +1.000 | beta = (+1.01, +1.00, +1.00) loss 1.4691 
+    Adam from mean                             MAD    e = (+0.917, +0.903, +0.946)  sum e = +2.766 | beta = (+2.67, +2.74, +2.89) loss 1.6793 
+  dav2 p=[0.4, 0.35, 0.25]: best object obj1 1.3425
+    Adam from best_halfbar                     MAD    e = (+0.999, -0.000, +0.000)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) loss 1.3447 
+    Adam from mean                             MAD    e = (+1.136, +0.986, +0.536)  sum e = +2.657 | beta = (+2.95, +2.64, +2.37) loss 1.5893 
+  dav2 p=[0.45, 0.45, 0.1]: best object obj1 1.2390
+    Adam from best_halfbar                     MAD    e = (+0.999, +0.001, +0.001)  sum e = +1.001 | beta = (+1.00, +1.01, +1.00) loss 1.2417 
+    Adam from mean                             MAD    e = (+0.850, +0.979, -0.019)  sum e = +1.810 | beta = (+2.21, +1.84, +1.38) loss 1.3638 
+  dav2 p=[0.6, 0.3, 0.1]: best object obj1 0.8993
+    Adam from best_halfbar                     MAD    e = (+1.000, -0.001, +0.000)  sum e = +0.999 | beta = (+1.00, +1.00, +1.00) loss 0.9027 
+    Adam from mean                             MAD    e = (+1.039, +0.469, +0.076)  sum e = +1.584 | beta = (+1.89, +1.86, +1.00) loss 1.0818 
+  lsl1 p=[0.33, 0.33, 0.33]: best object obj2 1.3350
+    Adam from best_halfbar                     MAD    e = (-0.000, +0.999, -0.000)  sum e = +0.999 | beta = (+1.00, +1.00, +1.00) loss 1.3350 
+    Adam from mean                             MAD    e = (+1.027, +1.014, +1.017)  sum e = +3.058 | beta = (+3.05, +3.03, +3.08) loss 1.9245 
+  lsl1 p=[0.4, 0.35, 0.25]: best object obj1 1.2028
+    Adam from best_halfbar                     MAD    e = (+1.000, -0.000, -0.000)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) loss 1.2028 
+    Adam from mean                             MAD    e = (+1.000, +0.000, +0.000)  sum e = +1.001 | beta = (+1.00, +1.00, +1.00) loss 1.2028 
+  lsl1 p=[0.45, 0.45, 0.1]: best object obj1 1.1018
+    Adam from best_halfbar                     MAD    e = (+1.000, -0.000, +0.000)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) loss 1.1018 
+    Adam from mean                             MAD    e = (-0.000, +0.999, +0.000)  sum e = +0.999 | beta = (+1.00, +1.00, +1.00) loss 1.1028 
+  lsl1 p=[0.6, 0.3, 0.1]: best object obj1 0.8015
+    Adam from best_halfbar                     MAD    e = (+1.000, +0.000, +0.000)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) loss 0.8015 
+    Adam from mean                             MAD    e = (+1.000, -0.000, -0.000)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) loss 0.8015 
+  midas p=[0.33, 0.33, 0.33]: best object obj3 0.4856
+    Adam from best_halfbar                     MAD    e = (+0.006, +0.011, +0.984)  sum e = +1.002 | beta = (+1.08, +1.00, +0.93) loss 0.4853*
+    Adam from mean                             MAD    e = (+1.045, +0.970, +1.060)  sum e = +3.075 | beta = (+2.95, +2.95, +3.31) loss 0.4834*
+  midas p=[0.4, 0.35, 0.25]: best object obj1 0.4424
+    Adam from best_halfbar                     MAD    e = (+0.962, +0.015, -0.006)  sum e = +0.972 | beta = (+1.00, +1.07, +0.85) loss 0.4416*
+    Adam from mean                             MAD    e = (+1.264, +0.971, +0.477)  sum e = +2.712 | beta = (+3.64, +2.01, +2.48) loss 0.4443 
+  midas p=[0.45, 0.45, 0.1]: best object obj1 0.4077
+    Adam from best_halfbar                     MAD    e = (+0.706, +1.351, +0.495)  sum e = +2.553 | beta = (+4.01, +2.54, +1.10) loss 0.3824*
+    Adam from mean                             MAD    e = (+0.905, +1.057, +0.074)  sum e = +2.037 | beta = (+2.79, +1.75, +1.57) loss 0.3901*
+    Adam from obj1                             MAD    e = (+0.959, +0.021, -0.003)  sum e = +0.978 | beta = (+1.00, +1.09, +0.84) loss 0.4058*
+  midas p=[0.6, 0.3, 0.1]: best object obj1 0.2960
+    Adam from best_halfbar                     MAD    e = (+0.989, +0.003, -0.002)  sum e = +0.990 | beta = (+1.00, +1.01, +0.96) loss 0.2971 
+    Adam from mean                             MAD    e = (+1.114, +0.526, +0.095)  sum e = +1.735 | beta = (+2.23, +1.83, +1.15) loss 0.3147 
+  dav2trim p=[0.33, 0.33, 0.33]: best object obj3 1.4013
+    Adam from obj3                             MAD    e = (+0.004, +0.002, +0.993)  sum e = +0.998 | beta = (+1.02, +0.98, +1.00) loss 1.4037 
+    Adam from mean                             MAD    e = (+0.928, +0.894, +0.933)  sum e = +2.756 | beta = (+2.67, +2.72, +2.87) loss 1.5293 
+    Adam from midas_patchwork_0.45             MAD    e = (+0.734, +1.398, +0.510)  sum e = +2.641 | beta = (+4.04, +2.72, +1.16) loss 1.5490 
+    Adam from midas_meanlike_unif              MAD    e = (+0.920, +0.890, +0.938)  sum e = +2.748 | beta = (+2.66, +2.74, +2.83) loss 1.5118 
+  dav2trim p=[0.4, 0.35, 0.25]: best object obj1 1.2830
+    Adam from obj1                             MAD    e = (+0.994, +0.001, -0.000)  sum e = +0.995 | beta = (+1.00, +1.01, +0.98) loss 1.2864 
+    Adam from mean                             MAD    e = (+1.202, +1.027, +0.519)  sum e = +2.747 | beta = (+3.32, +2.40, +2.51) loss 1.4529 
+    Adam from midas_patchwork_0.45             MAD    e = (+0.745, +1.393, +0.498)  sum e = +2.635 | beta = (+4.05, +2.67, +1.17) loss 1.4817 
+    Adam from midas_meanlike_unif              MAD    e = (+0.974, +0.904, +0.880)  sum e = +2.757 | beta = (+2.80, +2.58, +2.88) loss 1.5007 
+  dav2trim p=[0.45, 0.45, 0.1]: best object obj1 1.1845
+    Adam from obj1                             MAD    e = (+0.994, +0.006, +0.003)  sum e = +1.002 | beta = (+0.99, +1.02, +0.99) loss 1.1869 
+    Adam from mean                             MAD    e = (+0.895, +1.033, +0.001)  sum e = +1.930 | beta = (+2.59, +1.80, +1.40) loss 1.2482 
+    Adam from midas_patchwork_0.45             MAD    e = (+0.739, +1.400, +0.491)  sum e = +2.629 | beta = (+4.05, +2.68, +1.15) loss 1.3203 
+    Adam from midas_meanlike_unif              MAD    e = (+1.003, +1.004, +0.708)  sum e = +2.715 | beta = (+3.14, +2.37, +2.62) loss 1.4236 
+  dav2trim p=[0.6, 0.3, 0.1]: best object obj1 0.8597
+    Adam from obj1                             MAD    e = (+1.000, -0.000, +0.000)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) loss 0.8628 
+    Adam from mean                             MAD    e = (+1.062, +0.479, +0.068)  sum e = +1.609 | beta = (+2.06, +1.76, +1.00) loss 0.9910 
+    Adam from midas_patchwork_0.45             MAD    e = (+0.795, +1.356, +0.483)  sum e = +2.634 | beta = (+4.10, +2.53, +1.27) loss 1.3900 
+    Adam from midas_meanlike_unif              MAD    e = (+1.136, +0.867, +0.703)  sum e = +2.706 | beta = (+2.98, +2.12, +3.01) loss 1.3543 
+  dav2trimgm p=[0.33, 0.33, 0.33]: best object obj3 1.4716
+    Adam from obj3                             MAD    e = (-0.001, +0.001, +1.000)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) loss 2.2184 
+    Adam from mean                             MAD    e = (+1.010, +1.020, +1.059)  sum e = +3.089 | beta = (+2.98, +3.09, +3.19) loss 1.6095 
+    Adam from midas_patchwork_0.45             MAD    e = (+0.737, +1.375, +0.530)  sum e = +2.642 | beta = (+3.91, +2.75, +1.26) loss 1.6766 
+    Adam from midas_meanlike_unif              MAD    e = (+0.746, +0.714, +0.766)  sum e = +2.226 | beta = (+2.15, +2.20, +2.32) loss 1.5308 
+  dav2trimgm p=[0.4, 0.35, 0.25]: best object obj1 1.3377
+    Adam from obj1                             MAD    e = (+1.000, -0.001, +0.000)  sum e = +0.999 | beta = (+1.00, +1.00, +1.00) loss 1.8953 
+    Adam from mean                             MAD    e = (+1.149, +1.092, +0.516)  sum e = +2.757 | beta = (+3.36, +2.40, +2.50) loss 1.3920 
+    Adam from midas_patchwork_0.45             MAD    e = (+0.752, +1.378, +0.512)  sum e = +2.642 | beta = (+3.90, +2.76, +1.27) loss 1.5741 
+    Adam from midas_meanlike_unif              MAD    e = (+0.799, +0.765, +0.700)  sum e = +2.264 | beta = (+2.31, +2.22, +2.26) loss 1.5589 
+  dav2trimgm p=[0.45, 0.45, 0.1]: best object obj1 1.2323
+    Adam from obj1                             MAD    e = (+0.990, -0.001, +0.000)  sum e = +0.990 | beta = (+0.97, +1.00, +1.00) loss 2.0870 
+    Adam from mean                             MAD    e = (+0.858, +1.093, +0.002)  sum e = +1.953 | beta = (+2.74, +1.75, +1.36) loss 1.1962*
+    Adam from midas_patchwork_0.45             MAD    e = (+0.736, +1.395, +0.502)  sum e = +2.634 | beta = (+3.84, +2.79, +1.27) loss 1.4011 
+    Adam from midas_meanlike_unif              MAD    e = (+0.790, +0.926, +0.554)  sum e = +2.271 | beta = (+2.49, +2.34, +1.97) loss 1.4230 
+  dav2trimgm p=[0.6, 0.3, 0.1]: best object obj1 0.8949
+    Adam from obj1                             MAD    e = (+1.000, -0.002, +0.000)  sum e = +0.998 | beta = (+1.00, +1.00, +1.00) loss 1.4334 
+    Adam from mean                             MAD    e = (+1.122, +0.545, +0.030)  sum e = +1.697 | beta = (+2.69, +1.37, +1.03) loss 0.9580 
+    Adam from midas_patchwork_0.45             MAD    e = (+0.823, +1.360, +0.499)  sum e = +2.681 | beta = (+3.99, +2.71, +1.33) loss 1.8002 
+    Adam from midas_meanlike_unif              MAD    e = (+1.005, +0.790, +0.504)  sum e = +2.299 | beta = (+2.72, +1.96, +2.21) loss 1.3869 
+
+(6) SSI-MAE (median/MAD absolute error) patchworks of check3, read at MAD scale
+  SSI-MAE patchwork, p = (0.50, 0.30, 0.20)    MAD    e = (+0.999, -0.000, -0.000)  sum e = +0.999 | beta = (+1.00, +1.00, +1.00) 
+  SSI-MAE patchwork, p = (0.45, 0.45, 0.10)    MAD    e = (+0.956, +1.092, +0.410)  sum e = +2.458 | beta = (+3.27, +2.05, +2.05) 
+  SSI-MAE patchwork, p = (0.40, 0.35, 0.25)    MAD    e = (+1.340, +0.525, +0.338)  sum e = +2.202 | beta = (+3.06, +1.04, +2.50) 
+  SSI-MAE patchwork, p = (0.36, 0.33, 0.31)    MAD    e = (+1.341, +0.546, +0.341)  sum e = +2.228 | beta = (+3.11, +1.07, +2.50) 
+  SSI-MAE patchwork, p = (0.33, 0.33, 0.33)    MAD    e = (+0.611, +1.114, +1.005)  sum e = +2.730 | beta = (+2.51, +4.19, +1.48) 
+
+(7) mean over the objects (weight w, belief p) and their depth reversals (weight 1 - w, belief q)
+  p uniform, q = p, w = P(upright) = 1.00      native e = (+0.333, +0.333, +0.333)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) (P(up) - P(rev) = +1.00)
+  p uniform, q = p, w = P(upright) = 0.75      native e = (+0.166, +0.167, +0.167)  sum e = +0.499 | beta = (+0.50, +0.50, +0.50) (P(up) - P(rev) = +0.50)
+  p uniform, q = p, w = P(upright) = 0.60      native e = (+0.066, +0.067, +0.067)  sum e = +0.199 | beta = (+0.20, +0.20, +0.20) (P(up) - P(rev) = +0.20)
+  p uniform, q = p, w = P(upright) = 0.50      native e = (-0.001, -0.000, -0.000)  sum e = -0.001 | beta = (-0.00, -0.00, -0.00) (P(up) - P(rev) = +0.00)
+  p uniform, q = p, w = P(upright) = 0.40      native e = (-0.068, -0.067, -0.067)  sum e = -0.202 | beta = (-0.20, -0.20, -0.20) (P(up) - P(rev) = -0.20)
+  p uniform, q = p, w = P(upright) = 0.25      native e = (-0.168, -0.167, -0.167)  sum e = -0.502 | beta = (-0.50, -0.50, -0.50) (P(up) - P(rev) = -0.50)
+  p uniform, q = p, w = P(upright) = 0.00      native e = (-0.336, -0.333, -0.333)  sum e = -1.003 | beta = (-1.00, -1.00, -1.00) (P(up) - P(rev) = -1.00)
+  p uniform, q = object 1, w = P(upright) = 1.00 native e = (+0.333, +0.333, +0.333)  sum e = +1.000 | beta = (+1.00, +1.00, +1.00) (P(up) - P(rev) = +1.00)
+  p uniform, q = object 1, w = P(upright) = 0.75 native e = (-0.001, +0.250, +0.250)  sum e = +0.499 | beta = (+0.50, +0.50, +0.50) (P(up) - P(rev) = +0.50)
+  p uniform, q = object 1, w = P(upright) = 0.60 native e = (-0.201, +0.200, +0.200)  sum e = +0.199 | beta = (+0.20, +0.20, +0.20) (P(up) - P(rev) = +0.20)
+  p uniform, q = object 1, w = P(upright) = 0.50 native e = (-0.334, +0.167, +0.167)  sum e = -0.001 | beta = (+0.00, +0.00, -0.00) (P(up) - P(rev) = +0.00)
+  p uniform, q = object 1, w = P(upright) = 0.40 native e = (-0.468, +0.133, +0.133)  sum e = -0.202 | beta = (-0.20, -0.20, -0.20) (P(up) - P(rev) = -0.20)
+  p uniform, q = object 1, w = P(upright) = 0.25 native e = (-0.668, +0.083, +0.083)  sum e = -0.502 | beta = (-0.50, -0.50, -0.50) (P(up) - P(rev) = -0.50)
+  p uniform, q = object 1, w = P(upright) = 0.00 native e = (-1.002, -0.000, -0.000)  sum e = -1.003 | beta = (-1.00, -1.00, -1.00) (P(up) - P(rev) = -1.00)
+
+(8) network units, from each network's possible controls (results/, set B, seed 0): median over layouts
+  dav2-s  (16 layouts): ordinary step r_j / g_j -0.19 | sum e of a map with no jump at any joint +0.50 | of the negated average of its controls +0.00
+  dav2-b  (16 layouts): ordinary step r_j / g_j -0.11 | sum e of a map with no jump at any joint +0.36 | of the negated average of its controls -0.28
+  dav2-l  (16 layouts): ordinary step r_j / g_j -0.06 | sum e of a map with no jump at any joint +0.21 | of the negated average of its controls -0.57
+  dpt-l   (16 layouts): ordinary step r_j / g_j -0.29 | sum e of a map with no jump at any joint +1.29 | of the negated average of its controls +1.57
+  zoe     (16 layouts): ordinary step r_j / g_j -0.43 | sum e of a map with no jump at any joint +1.09 | of the negated average of its controls +1.17
+  lotus-d (16 layouts): ordinary step r_j / g_j -0.25 | sum e of a map with no jump at any joint +0.51 | of the negated average of its controls +0.01
+  lotus-g (16 layouts): ordinary step r_j / g_j -0.42 | sum e of a map with no jump at any joint +0.81 | of the negated average of its controls +0.63
+  e2eft   (16 layouts): ordinary step r_j / g_j -0.31 | sum e of a map with no jump at any joint +0.81 | of the negated average of its controls +0.63
+  mg11-1  (16 layouts): ordinary step r_j / g_j -0.25 | sum e of a map with no jump at any joint +0.64 | of the negated average of its controls +0.28
+  mg10-1  (16 layouts): ordinary step r_j / g_j -0.43 | sum e of a map with no jump at any joint +0.89 | of the negated average of its controls +0.79

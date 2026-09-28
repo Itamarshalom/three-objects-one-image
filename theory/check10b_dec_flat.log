@@ -1,0 +1,7 @@
+gap 7.8T Dec(z_1) split [ 1.012  0.004 -0.016]
+gap 7.8T Dec(z_2) split [-0.003  1.013 -0.011]
+gap 7.8T Dec(z_3) split [-0.003  0.002  1.001]
+gap 7.8T w=[0.5 0.5 0. ] split Dec(sum w z)=[ 0.449  0.563 -0.012] max|dev|=0.063
+gap 7.8T w=[0.333 0.333 0.333] split Dec(sum w z)=[0.344 0.343 0.313] max|dev|=0.020
+gap 7.8T w=[0.6 0.3 0.1] split Dec(sum w z)=[0.575 0.345 0.081] max|dev|=0.045
+gap 7.8T w=[0.4  0.35 0.25] split Dec(sum w z)=[0.399 0.37  0.231] max|dev|=0.020

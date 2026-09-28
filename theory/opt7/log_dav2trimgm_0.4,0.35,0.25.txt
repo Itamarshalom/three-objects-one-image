@@ -1,0 +1,6 @@
+p=[0.4  0.35 0.25] dav2trimgm candidates (52s): {'obj1': 1.3377, 'obj2': 1.4529, 'obj3': 1.6553, 'mean': 2.084, 'middle': 2.1742, 'midas_patchwork_0.45': 1.59, 'midas_meanlike_unif': 1.6118} | half-bar best 1.3377 (0, 0, 0, 0, 0, 0) best non-object 1.4775 (2, 2, 1, 1, 0, 0)
+  Adam from obj1: {'start': 1.337669795948134, 'loss': 1.895279533531497, 'split': [0.9997, 0.0002, 0.0001], 'w': [0.9991, -0.0007, -0.0001], 'span_resid': 0.0278} (98s)
+  Adam from mean: {'start': 2.0840052224105072, 'loss': 1.3919800280250858, 'split': [0.4288, 0.3849, 0.1862], 'w': [0.4219, 0.3574, 0.2207], 'span_resid': 0.2923} (165s)
+  Adam from midas_patchwork_0.45: {'start': 1.590023781107288, 'loss': 1.574134328404103, 'split': [0.3513, 0.4758, 0.1729], 'w': [0.3471, 0.3955, 0.2574], 'span_resid': 0.4786} (231s)
+  Adam from midas_meanlike_unif: {'start': 1.6118122766912317, 'loss': 1.5589193142699513, 'split': [0.347, 0.3291, 0.3239], 'w': [0.3461, 0.3335, 0.3204], 'span_resid': 0.3244} (296s)
+  best object 1.3377 vs best Adam end 1.3920: object wins

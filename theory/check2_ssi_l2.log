@@ -1,0 +1,43 @@
+Gram G (per pixel):
+ [[ 6.2345 -2.0941 -2.0897]
+ [-2.0941  6.2474 -2.0993]
+ [-2.0897 -2.0993  6.2351]]
+
+=== (a) plain L2, fixed gauge: optimum is the posterior mean (trivial); split(mean) ===
+p=(+0.600, +0.300, +0.100) split(mean)=(+0.600, +0.300, +0.100)
+p=(+0.400, +0.350, +0.250) split(mean)=(+0.400, +0.350, +0.250)
+p=(+0.333, +0.333, +0.333) split(mean)=(+0.333, +0.333, +0.333)
+p=(+0.500, +0.300, +0.200) split(mean)=(+0.500, +0.300, +0.200)
+p=(+0.800, +0.150, +0.050) split(mean)=(+0.800, +0.150, +0.050)
+p=(+0.450, +0.450, +0.100) split(mean)=(+0.450, +0.450, +0.100)
+p=(+0.360, +0.330, +0.310) split(mean)=(+0.360, +0.330, +0.310)
+
+=== (b) per-target normalisation then plain L2: optimum = sum_k p_k N(d_k) ===
+pct 2/98 -> [-1,1] (Marigold/Lotus): scale a_k = [0.2409  0.24076 0.24098], a_k/mean(a) = [1.00009 0.9995  1.00041]
+   p=(+0.600, +0.300, +0.100) split=(+0.600, +0.300, +0.100)  predicted p_k a_k/sum=(+0.600, +0.300, +0.100)
+   p=(+0.400, +0.350, +0.250) split=(+0.400, +0.350, +0.250)  predicted p_k a_k/sum=(+0.400, +0.350, +0.250)
+   p=(+0.333, +0.333, +0.333) split=(+0.333, +0.333, +0.333)  predicted p_k a_k/sum=(+0.333, +0.333, +0.333)
+median/MAD: scale a_k = [0.46314 0.46251 0.4631 ], a_k/mean(a) = [1.00049 0.99911 1.0004 ]
+   p=(+0.600, +0.300, +0.100) split=(+0.600, +0.300, +0.100)  predicted p_k a_k/sum=(+0.600, +0.300, +0.100)
+   p=(+0.400, +0.350, +0.250) split=(+0.400, +0.350, +0.250)  predicted p_k a_k/sum=(+0.400, +0.350, +0.250)
+   p=(+0.333, +0.333, +0.333) split=(+0.333, +0.333, +0.333)  predicted p_k a_k/sum=(+0.333, +0.333, +0.333)
+
+=== (c) MiDaS ssimse (LS scale+shift of prediction, then MSE) ===
+columns: p | theory w (top eig of P G), split=w/sum(w) | GD optimum split, sum(w)/|w|_1, resid | loss(opt) loss(mean) loss(best single obj) | p recovered as w/(G w)
+p=(+0.600, +0.300, +0.100) | w_th=(+0.763, -0.203, -0.033) split_th=(+1.449, -0.386, -0.063) | GD split=(+1.449, -0.386, -0.063) sum(w)/|w|1=+0.527 resid=2.9e-10 (best init obj1) | L=2.1084 L(mean)=3.2088 L(obj)=2.2167 | p_rec=(+0.600, +0.300, +0.100)
+p=(+0.400, +0.350, +0.250) | w_th=(+0.560, -0.382, -0.058) split_th=(+4.645, -3.164, -0.481) | GD split=(+4.645, -3.163, -0.481) sum(w)/|w|1=+0.121 resid=6.9e-12 (best init mean) | L=3.0883 L(mean)=5.1490 L(obj)=3.3241 | p_rec=(+0.400, +0.350, +0.250)
+p=(+0.333, +0.333, +0.333) | w_th=(-0.174, +0.500, -0.326) split_th=undefined (sum w ~ 0) | GD split=(-350.783, +1009.630, -657.848) sum(w)/|w|1=+0.000 resid=5.2e-09 (best init obj1) | L=3.4581 L(mean)=5.5555 L(obj)=3.6874 | p_rec=(+0.333, +0.333, +0.333)
+p=(+0.500, +0.300, +0.200) | w_th=(+0.692, -0.224, -0.084) split_th=(+1.799, -0.582, -0.217) | GD split=(+1.799, -0.582, -0.217) sum(w)/|w|1=+0.385 resid=1.6e-14 (best init mean) | L=2.6565 L(mean)=4.1577 L(obj)=2.7702 | p_rec=(+0.500, +0.300, +0.200)
+p=(+0.800, +0.150, +0.050) | w_th=(+0.915, -0.067, -0.018) split_th=(+1.103, -0.081, -0.022) | GD split=(+1.103, -0.081, -0.022) sum(w)/|w|1=+0.829 resid=4.3e-10 (best init obj3) | L=1.0928 L(mean)=1.3170 L(obj)=1.1083 | p_rec=(+0.800, +0.150, +0.050)
+p=(+0.450, +0.450, +0.100) | w_th=(-0.499, +0.501, -0.000) split_th=(-324.014, +325.193, -0.179) | GD split=(-324.008, +325.187, -0.179) sum(w)/|w|1=+0.002 resid=1.3e-09 (best init obj1) | L=2.4896 L(mean)=4.3140 L(obj)=3.0426 | p_rec=(+0.450, +0.450, +0.100)
+p=(+0.360, +0.330, +0.310) | w_th=(+0.535, -0.326, -0.139) split_th=(+7.669, -4.681, -1.988) | GD split=(+7.669, -4.681, -1.988) sum(w)/|w|1=+0.070 resid=1.7e-10 (best init obj1) | L=3.3394 L(mean)=5.5020 L(obj)=3.5453 | p_rec=(+0.360, +0.330, +0.310)
+
+circulant closed form (c=8.333, gamma=-2.094):
+  p=(+0.600, +0.300, +0.100) lambda=4.1324 split = gamma p/(lambda - c p) = (+1.448, -0.385, -0.063)
+  p=(+0.400, +0.350, +0.250) lambda=3.1516 split = gamma p/(lambda - c p) = (+4.610, -3.120, -0.490)
+  p=(+0.800, +0.150, +0.050) lambda=5.1473 split = gamma p/(lambda - c p) = (+1.103, -0.081, -0.022)
+  p=(+0.360, +0.330, +0.310) lambda=2.9010 split = gamma p/(lambda - c p) = (+7.619, -4.576, -2.044)
+
+=== (d) variant: N(f) and N(d_k) both median/MAD normalised, then MSE ===
+p=(+0.600, +0.300, +0.100) loss=1.2104 (mean map: 1.3282) split=(+0.566, +0.359, +0.076) resid of span fit=0.262
+p=(+0.333, +0.333, +0.333) loss=1.6436 (mean map: 1.8091) split=(+0.333, +0.333, +0.333) resid of span fit=0.341

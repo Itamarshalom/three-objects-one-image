@@ -1,0 +1,38 @@
+dav2Base_texture_a90                       split(w)=[ 1.56 -0.93  0.36]  ramp share=+0.35  profile resid=0.56
+dav2Base_texture_a90_possible0             split(w)=[ 1.26 -0.22 -0.04]  ramp share=+0.65  profile resid=0.27
+dav2Large_texture_a90                      split(w)=[ 1.73 -0.12 -0.61]  ramp share=+0.41  profile resid=0.52
+dav2Large_texture_a90_possible0            split(w)=[ 1.31 -0.14 -0.17]  ramp share=+0.62  profile resid=0.21
+dav2Small_texture_a90                      split(w)=[-6.18  1.6   5.58]  ramp share=-0.07  profile resid=0.59
+dav2Small_texture_a90_possible0            split(w)=[ 3.39 -0.85 -1.54]  ramp share=+0.17  profile resid=0.30
+mg10s10_texture_a90__seed0                 split(w)=[ 68.26 -22.94 -44.31]  ramp share=-0.01  profile resid=0.70
+mg10s10_texture_a90__seed1                 split(w)=[-1.75  1.09  1.67]  ramp share=+0.22  profile resid=0.24
+mg10s10_texture_a90__seed2                 split(w)=[-2.76  2.39  1.37]  ramp share=+0.15  profile resid=0.45
+mg10s10_texture_a90__seed3                 split(w)=[ 0.16 -0.28  1.11]  ramp share=+0.65  profile resid=0.46
+mg10s10_texture_a90_possible0__seed0       split(w)=[ 1.12  0.03 -0.15]  ramp share=+0.77  profile resid=0.53
+mg10s10_texture_a90_possible0__seed1       split(w)=[0.03 0.36 0.61]  ramp share=+1.00  profile resid=0.75
+mg10s10_texture_a90_possible0__seed2       split(w)=[ 1.21  0.32 -0.53]  ramp share=+0.49  profile resid=0.51
+mg10s10_texture_a90_possible0__seed3       split(w)=[ 0.71 -0.07  0.36]  ramp share=+0.88  profile resid=0.30
+mg10s1_texture_a90__seed0                  split(w)=[-0.74  0.75  0.99]  ramp share=+0.40  profile resid=0.69
+mg10s1_texture_a90__seed1                  split(w)=[-0.96  0.75  1.2 ]  ramp share=+0.34  profile resid=0.46
+mg10s1_texture_a90__seed2                  split(w)=[-0.5   0.76  0.74]  ramp share=+0.50  profile resid=0.52
+mg10s1_texture_a90__seed3                  split(w)=[-0.15  0.32  0.83]  ramp share=+0.77  profile resid=0.70
+mg10s1_texture_a90_possible0__seed0        split(w)=[0.46 0.22 0.32]  ramp share=+1.00  profile resid=0.90
+mg10s1_texture_a90_possible0__seed1        split(w)=[0.06 0.28 0.66]  ramp share=+1.00  profile resid=0.77
+mg10s1_texture_a90_possible0__seed2        split(w)=[0.43 0.27 0.29]  ramp share=+1.00  profile resid=0.77
+mg10s1_texture_a90_possible0__seed3        split(w)=[0.43 0.09 0.48]  ramp share=+1.00  profile resid=0.73
+mg10s25_texture_a90__seed0                 split(w)=[11.57 -3.47 -7.11]  ramp share=-0.05  profile resid=0.71
+mg10s25_texture_a90__seed1                 split(w)=[-1.8   1.15  1.65]  ramp share=+0.22  profile resid=0.23
+mg10s25_texture_a90__seed2                 split(w)=[-2.98  2.54  1.45]  ramp share=+0.14  profile resid=0.45
+mg10s25_texture_a90__seed3                 split(w)=[ 0.18 -0.29  1.11]  ramp share=+0.63  profile resid=0.46
+mg10s25_texture_a90_possible0__seed0       split(w)=[ 1.18  0.01 -0.19]  ramp share=+0.73  profile resid=0.51
+mg10s25_texture_a90_possible0__seed1       split(w)=[0.03 0.36 0.61]  ramp share=+1.00  profile resid=0.76
+mg10s25_texture_a90_possible0__seed2       split(w)=[ 1.3  0.3 -0.6]  ramp share=+0.45  profile resid=0.50
+mg10s25_texture_a90_possible0__seed3       split(w)=[ 0.72 -0.08  0.36]  ramp share=+0.86  profile resid=0.29
+mg10s4_texture_a90__seed0                  split(w)=[-16.01   6.33  10.69]  ramp share=+0.03  profile resid=0.71
+mg10s4_texture_a90__seed1                  split(w)=[-1.72  1.03  1.69]  ramp share=+0.23  profile resid=0.26
+mg10s4_texture_a90__seed2                  split(w)=[-2.41  2.24  1.17]  ramp share=+0.17  profile resid=0.46
+mg10s4_texture_a90__seed3                  split(w)=[ 0.09 -0.27  1.18]  ramp share=+0.65  profile resid=0.49
+mg10s4_texture_a90_possible0__seed0        split(w)=[ 1.02  0.06 -0.08]  ramp share=+0.86  profile resid=0.57
+mg10s4_texture_a90_possible0__seed1        split(w)=[0.04 0.35 0.61]  ramp share=+1.00  profile resid=0.74
+mg10s4_texture_a90_possible0__seed2        split(w)=[ 1.07  0.35 -0.42]  ramp share=+0.54  profile resid=0.55
+mg10s4_texture_a90_possible0__seed3        split(w)=[ 0.69 -0.05  0.36]  ramp share=+0.91  profile resid=0.31

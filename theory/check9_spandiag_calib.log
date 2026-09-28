@@ -1,0 +1,92 @@
+clean theory maps: split | ramp share | residual | max in-bar |z|
+  object1                  object    split [1. 0. 0.] ramp +1.00 resid 0.00 | max|z| 0.00
+  object2                  object    split [-0.  1.  0.] ramp +1.00 resid 0.00 | max|z| 0.00
+  object3                  object    split [-0. -0.  1.] ramp +1.00 resid 0.00 | max|z| 0.00
+  mean[0.6 0.3 0.1]        mean      split [0.6 0.3 0.1] ramp +1.00 resid 0.00 | max|z| 0.00
+  mean[0.4  0.35 0.25]     mean      split [0.4  0.35 0.25] ramp +1.00 resid 0.00 | max|z| 0.00
+  mean[0.33 0.33 0.33]     mean      split [0.33 0.33 0.33] ramp +1.00 resid 0.00 | max|z| 0.00
+  PCA[0.6 0.3 0.1]         PCA       split [ 1.45 -0.39 -0.06] ramp +0.53 resid 0.00 | max|z| 0.00
+  PCA[0.4  0.35 0.25]      PCA       split [ 4.64 -3.16 -0.48] ramp +0.12 resid 0.00 | max|z| 0.00
+  patch0.40_0.35_0.25      patchwork split [0.53 0.27 0.21] ramp +1.00 resid 0.29 | max|z| 1.00
+  patch0.36_0.33_0.31      patchwork split [0.48 0.3  0.22] ramp +1.00 resid 0.29 | max|z| 1.13
+  patch0.45_0.45_0.10      patchwork split [0.39 0.39 0.22] ramp +1.00 resid 0.29 | max|z| 1.02
+  patch0.50_0.30_0.20      patchwork split [0.93 0.04 0.03] ramp +1.00 resid 0.05 | max|z| 0.23
+  patch0.33_0.33_0.33      patchwork split [0.34 0.33 0.33] ramp +1.00 resid 0.19 | max|z| 0.53
+
+pilot outputs (texture_a90 and its one-answer control):
+  dav2Base_texture_a90                     split [ 1.56 -0.93  0.36] ramp +0.35 resid 0.56 | max in-bar |z| 0.89, median 0.25
+  dav2Base_texture_a90_possible0           split [ 1.26 -0.22 -0.04] ramp +0.65 resid 0.27 | max in-bar |z| 0.58, median 0.15
+  dav2Large_texture_a90                    split [ 1.73 -0.12 -0.61] ramp +0.41 resid 0.52 | max in-bar |z| 0.98, median 0.40
+  dav2Large_texture_a90_possible0          split [ 1.31 -0.14 -0.17] ramp +0.62 resid 0.21 | max in-bar |z| 0.39, median 0.17
+  dav2Small_texture_a90                    split [-6.18  1.6   5.58] ramp -0.07 resid 0.59 | max in-bar |z| 1.38, median 0.26
+  dav2Small_texture_a90_possible0          split [ 3.39 -0.85 -1.54] ramp +0.17 resid 0.30 | max in-bar |z| 0.69, median 0.16
+  mg10s1_texture_a90__seed0                split [-0.74  0.75  0.99] ramp +0.40 resid 0.69 | max in-bar |z| 1.87, median 0.81
+  mg10s1_texture_a90__seed1                split [-0.96  0.75  1.2 ] ramp +0.34 resid 0.46 | max in-bar |z| 1.11, median 0.52
+  mg10s1_texture_a90__seed2                split [-0.5   0.76  0.74] ramp +0.50 resid 0.52 | max in-bar |z| 1.73, median 0.78
+  mg10s1_texture_a90__seed3                split [-0.15  0.32  0.83] ramp +0.77 resid 0.70 | max in-bar |z| 2.04, median 0.53
+  mg10s1_texture_a90_possible0__seed0      split [0.46 0.22 0.32] ramp +1.00 resid 0.90 | max in-bar |z| 2.89, median 1.17
+  mg10s1_texture_a90_possible0__seed1      split [0.06 0.28 0.66] ramp +1.00 resid 0.77 | max in-bar |z| 2.85, median 0.75
+  mg10s1_texture_a90_possible0__seed2      split [0.43 0.27 0.29] ramp +1.00 resid 0.77 | max in-bar |z| 2.42, median 0.96
+  mg10s1_texture_a90_possible0__seed3      split [0.43 0.09 0.48] ramp +1.00 resid 0.73 | max in-bar |z| 3.08, median 0.95
+  mg10s25_texture_a90__seed0               split [11.57 -3.47 -7.11] ramp -0.05 resid 0.71 | max in-bar |z| 1.71, median 0.66
+  mg10s25_texture_a90__seed1               split [-1.8   1.15  1.65] ramp +0.22 resid 0.23 | max in-bar |z| 0.74, median 0.20
+  mg10s25_texture_a90__seed2               split [-2.98  2.54  1.45] ramp +0.14 resid 0.45 | max in-bar |z| 1.36, median 0.32
+  mg10s25_texture_a90__seed3               split [ 0.18 -0.29  1.11] ramp +0.63 resid 0.46 | max in-bar |z| 1.44, median 0.26
+  mg10s25_texture_a90_possible0__seed0     split [ 1.18  0.01 -0.19] ramp +0.73 resid 0.51 | max in-bar |z| 1.20, median 0.44
+  mg10s25_texture_a90_possible0__seed1     split [0.03 0.36 0.61] ramp +1.00 resid 0.76 | max in-bar |z| 2.82, median 0.46
+  mg10s25_texture_a90_possible0__seed2     split [ 1.3  0.3 -0.6] ramp +0.45 resid 0.50 | max in-bar |z| 1.71, median 0.20
+  mg10s25_texture_a90_possible0__seed3     split [ 0.72 -0.08  0.36] ramp +0.86 resid 0.29 | max in-bar |z| 1.00, median 0.26
+
+confusion (rows = true class, cols = nearest-template label; share of 400 draws per map, pooled per class)
+  [iid rho=0.05]
+    object    -> object:0.93  mean:0.00  PCA:0.00  patchwork:0.07 | max in-bar |z|: median 0.16 (10-90% 0.11-0.22)
+    mean      -> object:0.00  mean:1.00  PCA:0.00  patchwork:0.00 | max in-bar |z|: median 0.16 (10-90% 0.11-0.23)
+    PCA       -> object:0.00  mean:0.00  PCA:1.00  patchwork:0.00 | max in-bar |z|: median 0.16 (10-90% 0.11-0.23)
+    patchwork -> object:0.01  mean:0.00  PCA:0.00  patchwork:0.99 | max in-bar |z|: median 0.92 (10-90% 0.23-1.13)
+  [iid rho=0.1]
+    object    -> object:0.84  mean:0.00  PCA:0.00  patchwork:0.16 | max in-bar |z|: median 0.32 (10-90% 0.21-0.45)
+    mean      -> object:0.00  mean:0.81  PCA:0.00  patchwork:0.19 | max in-bar |z|: median 0.32 (10-90% 0.22-0.45)
+    PCA       -> object:0.04  mean:0.00  PCA:0.96  patchwork:0.00 | max in-bar |z|: median 0.33 (10-90% 0.23-0.45)
+    patchwork -> object:0.02  mean:0.00  PCA:0.00  patchwork:0.98 | max in-bar |z|: median 0.85 (10-90% 0.35-1.18)
+  [iid rho=0.2]
+    object    -> object:0.75  mean:0.00  PCA:0.04  patchwork:0.21 | max in-bar |z|: median 0.63 (10-90% 0.44-0.89)
+    mean      -> object:0.00  mean:0.16  PCA:0.00  patchwork:0.84 | max in-bar |z|: median 0.62 (10-90% 0.44-0.88)
+    PCA       -> object:0.15  mean:0.00  PCA:0.83  patchwork:0.02 | max in-bar |z|: median 0.62 (10-90% 0.42-0.88)
+    patchwork -> object:0.03  mean:0.00  PCA:0.01  patchwork:0.96 | max in-bar |z|: median 0.91 (10-90% 0.58-1.35)
+  [iid rho=0.3]
+    object    -> object:0.72  mean:0.00  PCA:0.07  patchwork:0.22 | max in-bar |z|: median 0.92 (10-90% 0.62-1.30)
+    mean      -> object:0.00  mean:0.02  PCA:0.00  patchwork:0.98 | max in-bar |z|: median 0.92 (10-90% 0.62-1.28)
+    PCA       -> object:0.18  mean:0.00  PCA:0.74  patchwork:0.07 | max in-bar |z|: median 0.90 (10-90% 0.60-1.27)
+    patchwork -> object:0.03  mean:0.00  PCA:0.01  patchwork:0.96 | max in-bar |z|: median 1.13 (10-90% 0.77-1.60)
+  [ctrl-dav2Base]
+    object    -> object:0.67  mean:0.00  PCA:0.00  patchwork:0.33 | max in-bar |z|: median 0.56 (10-90% 0.48-0.65)
+    mean      -> object:0.00  mean:0.00  PCA:0.00  patchwork:1.00 | max in-bar |z|: median 0.55 (10-90% 0.48-0.64)
+    PCA       -> object:0.00  mean:0.00  PCA:1.00  patchwork:0.00 | max in-bar |z|: median 0.56 (10-90% 0.47-0.64)
+    patchwork -> object:0.00  mean:0.00  PCA:0.00  patchwork:1.00 | max in-bar |z|: median 0.86 (10-90% 0.52-1.00)
+  [ctrl-dav2Large]
+    object    -> object:0.67  mean:0.00  PCA:0.00  patchwork:0.33 | max in-bar |z|: median 0.38 (10-90% 0.32-0.44)
+    mean      -> object:0.00  mean:0.04  PCA:0.00  patchwork:0.96 | max in-bar |z|: median 0.38 (10-90% 0.32-0.43)
+    PCA       -> object:0.00  mean:0.00  PCA:1.00  patchwork:0.00 | max in-bar |z|: median 0.38 (10-90% 0.32-0.44)
+    patchwork -> object:0.00  mean:0.00  PCA:0.00  patchwork:1.00 | max in-bar |z|: median 0.81 (10-90% 0.44-1.12)
+  [ctrl-dav2Small]
+    object    -> object:0.67  mean:0.00  PCA:0.00  patchwork:0.33 | max in-bar |z|: median 0.65 (10-90% 0.56-0.75)
+    mean      -> object:0.00  mean:0.00  PCA:0.00  patchwork:1.00 | max in-bar |z|: median 0.66 (10-90% 0.56-0.76)
+    PCA       -> object:0.00  mean:0.00  PCA:1.00  patchwork:0.00 | max in-bar |z|: median 0.66 (10-90% 0.56-0.75)
+    patchwork -> object:0.00  mean:0.00  PCA:0.00  patchwork:1.00 | max in-bar |z|: median 0.77 (10-90% 0.55-1.34)
+
+(c) full control error (aligned control output - object 1) added to each theory map
+  [dav2Base] relative size of the control error 0.30; control max in-bar |z| 0.58
+    object    -> object:0.72  mean:0.00  PCA:0.28  patchwork:0.00 | ramp share median +0.62 | share with max in-bar |z| > 1.25 x control: 0.05
+    mean      -> object:0.00  mean:0.00  PCA:0.00  patchwork:1.00 | ramp share median +1.00 | share with max in-bar |z| > 1.25 x control: 0.13
+    PCA       -> object:0.50  mean:0.00  PCA:0.50  patchwork:0.00 | ramp share median +0.04 | share with max in-bar |z| > 1.25 x control: 0.03
+    patchwork -> object:0.14  mean:0.00  PCA:0.03  patchwork:0.83 | ramp share median +1.00 | share with max in-bar |z| > 1.25 x control: 0.82
+  [dav2Large] relative size of the control error 0.23; control max in-bar |z| 0.39
+    object    -> object:0.71  mean:0.00  PCA:0.29  patchwork:0.00 | ramp share median +0.60 | share with max in-bar |z| > 1.25 x control: 0.26
+    mean      -> object:0.00  mean:0.13  PCA:0.00  patchwork:0.87 | ramp share median +1.00 | share with max in-bar |z| > 1.25 x control: 0.40
+    PCA       -> object:0.50  mean:0.00  PCA:0.50  patchwork:0.00 | ramp share median +0.05 | share with max in-bar |z| > 1.25 x control: 0.26
+    patchwork -> object:0.15  mean:0.00  PCA:0.05  patchwork:0.80 | ramp share median +1.00 | share with max in-bar |z| > 1.25 x control: 0.87
+  [dav2Small] relative size of the control error 0.41; control max in-bar |z| 0.69
+    object    -> object:0.67  mean:0.00  PCA:0.33  patchwork:0.00 | ramp share median +0.17 | share with max in-bar |z| > 1.25 x control: 0.04
+    mean      -> object:0.00  mean:0.09  PCA:0.00  patchwork:0.91 | ramp share median +1.00 | share with max in-bar |z| > 1.25 x control: 0.19
+    PCA       -> object:0.98  mean:0.00  PCA:0.02  patchwork:0.00 | ramp share median -0.30 | share with max in-bar |z| > 1.25 x control: 0.04
+    patchwork -> object:0.00  mean:0.00  PCA:0.20  patchwork:0.80 | ramp share median +1.00 | share with max in-bar |z| > 1.25 x control: 0.36

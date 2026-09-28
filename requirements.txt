@@ -1,0 +1,8 @@
+# install torch and torchvision together first (CPU or CUDA build, see pytorch.org), then: pip install -r requirements.txt
+numpy>=2.0
+scipy>=1.13
+pillow>=10.0
+matplotlib>=3.9
+transformers>=5.0
+diffusers>=0.40
+accelerate>=1.0

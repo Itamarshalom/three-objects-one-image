@@ -1,0 +1,29 @@
+=== (a) pointwise weighted median, plain L1 with fixed targets ===
+p=(+0.600, +0.300, +0.100)  raw renderer gauge: split=(+1.000, +0.000, -0.000) | median/MAD gauge: split=(+1.000, +0.000, -0.000), MAD of median map=1.000, median=+0.0000
+p=(+0.800, +0.150, +0.050)  raw renderer gauge: split=(+1.000, +0.000, -0.000) | median/MAD gauge: split=(+1.000, +0.000, -0.000), MAD of median map=1.000, median=+0.0000
+p=(+0.500, +0.300, +0.200)  raw renderer gauge: split=(-0.000, +1.000, -0.000) | median/MAD gauge: split=(+0.667, +0.333, -0.000), MAD of median map=0.613, median=-0.3162
+p=(+0.450, +0.450, +0.100)  raw renderer gauge: split=(-0.000, +1.000, -0.000) | median/MAD gauge: split=(+0.334, +0.333, +0.333), MAD of median map=0.327, median=+0.0000
+p=(+0.400, +0.350, +0.250)  raw renderer gauge: split=(-0.000, +1.000, -0.000) | median/MAD gauge: split=(+0.334, +0.333, +0.333), MAD of median map=0.327, median=+0.0000
+p=(+0.360, +0.330, +0.310)  raw renderer gauge: split=(-0.000, +1.000, -0.000) | median/MAD gauge: split=(+0.334, +0.333, +0.333), MAD of median map=0.327, median=+0.0000
+p=(+0.333, +0.333, +0.333)  raw renderer gauge: split=(-0.000, +1.000, -0.000) | median/MAD gauge: split=(+0.334, +0.333, +0.333), MAD of median map=0.327, median=+0.0000
+   p=(0.5,0.3,0.2), g=(1-t) n_1 + t*middle, t=0.00: plain-L1 loss=0.890667 split=(+1.000, +0.000, -0.000)
+   p=(0.5,0.3,0.2), g=(1-t) n_1 + t*middle, t=0.25: plain-L1 loss=0.890667 split=(+0.833, +0.083, +0.083)
+   p=(0.5,0.3,0.2), g=(1-t) n_1 + t*middle, t=0.50: plain-L1 loss=0.890667 split=(+0.667, +0.166, +0.167)
+   p=(0.5,0.3,0.2), g=(1-t) n_1 + t*middle, t=0.75: plain-L1 loss=0.890667 split=(+0.500, +0.250, +0.250)
+   p=(0.5,0.3,0.2), g=(1-t) n_1 + t*middle, t=1.00: plain-L1 loss=0.890667 split=(+0.334, +0.333, +0.333)
+
+=== (b) SSI-MAE (median/MAD on both), exact bracket ===
+p=(+0.600, +0.300, +0.100) relaxed bound=0.7126 | dual bound D(lam*=-0.194)=0.7126 | primal patchwork loss=0.7126 (gap -0.0000) | best single object=0.7126 | mean map=0.8927 | middle map=1.1188
+      patchwork: pixel shares equal to obj1/2/3 = [1. 0. 0.], split=(+1.000, +0.000, -0.000), span-fit resid=0.000, median(g)=+0.000
+p=(+0.800, +0.150, +0.050) relaxed bound=0.3563 | dual bound D(lam*=-0.469)=0.3563 | primal patchwork loss=0.3563 (gap -0.0000) | best single object=0.3563 | mean map=0.5210 | middle map=1.1181
+      patchwork: pixel shares equal to obj1/2/3 = [1. 0. 0.], split=(+1.000, +0.000, -0.000), span-fit resid=0.000, median(g)=+0.000
+p=(+0.500, +0.300, +0.200) relaxed bound=0.8907 | dual bound D(lam*=0.000)=0.8907 | primal patchwork loss=0.8989 (gap 0.0082) | best single object=0.8907 | mean map=1.0303 | middle map=1.1190
+      patchwork: pixel shares equal to obj1/2/3 = [0.985 0.005 0.01 ], split=(+0.919, +0.060, +0.021), span-fit resid=0.136, median(g)=-0.019
+p=(+0.450, +0.450, +0.100) relaxed bound=0.8909 | dual bound D(lam*=0.100)=0.9581 | primal patchwork loss=0.9621 (gap 0.0040) | best single object=0.9798 | mean map=1.0304 | middle map=1.1192
+      patchwork: pixel shares equal to obj1/2/3 = [0.501 0.499 0.   ], split=(+0.422, +0.421, +0.157), span-fit resid=0.403, median(g)=+0.005
+p=(+0.400, +0.350, +0.250) relaxed bound=0.8908 | dual bound D(lam*=0.300)=1.0402 | primal patchwork loss=1.0433 (gap 0.0031) | best single object=1.0688 | mean map=1.1008 | middle map=1.1193
+      patchwork: pixel shares equal to obj1/2/3 = [0.744 0.18  0.076], split=(+0.535, +0.277, +0.187), span-fit resid=0.434, median(g)=+0.008
+p=(+0.360, +0.330, +0.310) relaxed bound=0.8909 | dual bound D(lam*=0.340)=1.0903 | primal patchwork loss=1.0903 (gap 0.0000) | best single object=1.1400 | mean map=1.1174 | middle map=1.1193
+      patchwork: pixel shares equal to obj1/2/3 = [0.669 0.249 0.082], split=(+0.513, +0.304, +0.183), span-fit resid=0.461, median(g)=+0.000
+p=(+0.333, +0.333, +0.333) relaxed bound=0.8909 | dual bound D(lam*=0.333)=1.1150 | primal patchwork loss=1.1151 (gap 0.0001) | best single object=1.1875 | mean map=1.1194 | middle map=1.1194
+      patchwork: pixel shares equal to obj1/2/3 = [0.326 0.348 0.326], split=(+0.330, +0.328, +0.342), span-fit resid=0.611, median(g)=+0.000

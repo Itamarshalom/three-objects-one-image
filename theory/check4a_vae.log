@@ -1,0 +1,23 @@
+VAE scaling factor 0.18215
+
+[wall] object occupies 0.55 of the [-1,1] range; latent dim 16384
+  ||z_k|| = [167.28 167.11 167.3 ]  pairwise ||z_j - z_k|| = [55.5  54.2  50.33]
+  Dec(z_1) split = [0.999 0.001 0.   ]
+  Dec(z_2) split = [0.    0.998 0.001]
+  Dec(z_3) split = [-0.002  0.003  0.999]
+  w=[0.5 0.5 0. ]: split Dec(sum w z) = [0.459 0.538 0.003] | split sum w Dec(z) = [0.54 0.46 0.  ] | |Dec(mean) - mean(Dec)| on fg: mean 0.0542, max 0.896 (object's own depth range 1.091)
+  w=[0.333 0.333 0.333]: split Dec(sum w z) = [0.358 0.338 0.304] | split sum w Dec(z) = [0.385 0.329 0.286] | |Dec(mean) - mean(Dec)| on fg: mean 0.0680, max 0.723 (object's own depth range 1.091)
+  w=[0.6 0.3 0.1]: split Dec(sum w z) = [0.572 0.336 0.092] | split sum w Dec(z) = [0.645 0.275 0.08 ] | |Dec(mean) - mean(Dec)| on fg: mean 0.0555, max 0.873 (object's own depth range 1.091)
+  w=[0.4  0.35 0.25]: split Dec(sum w z) = [0.41  0.362 0.228] | split sum w Dec(z) = [0.452 0.338 0.21 ] | |Dec(mean) - mean(Dec)| on fg: mean 0.0671, max 0.806 (object's own depth range 1.091)
+  w=[0.8  0.15 0.05]: split Dec(sum w z) = [0.769 0.185 0.046] | split sum w Dec(z) = [0.829 0.133 0.038] | |Dec(mean) - mean(Dec)| on fg: mean 0.0335, max 0.624 (object's own depth range 1.091)
+
+[tight] object occupies 1.06 of the [-1,1] range; latent dim 16384
+  ||z_k|| = [167.29 166.14 166.54]  pairwise ||z_j - z_k|| = [80.5  77.94 66.08]
+  Dec(z_1) split = [0.999 0.001 0.   ]
+  Dec(z_2) split = [-0.001  0.998  0.003]
+  Dec(z_3) split = [-0.001  0.001  1.   ]
+  w=[0.5 0.5 0. ]: split Dec(sum w z) = [0.508 0.488 0.004] | split sum w Dec(z) = [0.567 0.432 0.001] | |Dec(mean) - mean(Dec)| on fg: mean 0.0714, max 1.011 (object's own depth range 2.110)
+  w=[0.333 0.333 0.333]: split Dec(sum w z) = [0.396 0.327 0.277] | split sum w Dec(z) = [0.421 0.321 0.258] | |Dec(mean) - mean(Dec)| on fg: mean 0.0946, max 0.960 (object's own depth range 2.110)
+  w=[0.6 0.3 0.1]: split Dec(sum w z) = [0.615 0.303 0.082] | split sum w Dec(z) = [0.674 0.257 0.069] | |Dec(mean) - mean(Dec)| on fg: mean 0.0693, max 0.911 (object's own depth range 2.110)
+  w=[0.4  0.35 0.25]: split Dec(sum w z) = [0.45  0.343 0.206] | split sum w Dec(z) = [0.488 0.325 0.187] | |Dec(mean) - mean(Dec)| on fg: mean 0.0909, max 0.982 (object's own depth range 2.110)
+  w=[0.8  0.15 0.05]: split Dec(sum w z) = [0.801 0.157 0.042] | split sum w Dec(z) = [0.846 0.121 0.033] | |Dec(mean) - mean(Dec)| on fg: mean 0.0408, max 1.012 (object's own depth range 2.110)

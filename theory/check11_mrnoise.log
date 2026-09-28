@@ -1,0 +1,36 @@
+levels (i, w): share of draws [((1, 16), 0.118), ((1, 17), 0.103), ((1, 18), 0.096), ((1, 19), 0.084), ((1, 20), 0.075), ((1, 21), 0.07), ((1, 22), 0.064), ((1, 23), 0.058), ((1, 24), 0.052), ((1, 25), 0.05), ((1, 26), 0.044), ((1, 27), 0.042), ((1, 28), 0.04), ((1, 29), 0.037), ((1, 30), 0.035), ((1, 31), 0.032), ((2, 1), 0.36), ((2, 2), 0.302), ((2, 3), 0.179), ((2, 4), 0.096), ((2, 5), 0.042), ((2, 6), 0.018), ((2, 7), 0.003), ((3, 1), 0.64)]
+Sigma_T (per channel): eigenvalues 0.622 .. 820.3
+  MC check along z1-z2 (gap1T), ch0    : v'Sigma v model   11.405 | Monte Carlo   11.261
+  MC check along constant              : v'Sigma v model  820.274 | Monte Carlo  802.622
+  MC check along random iid            : v'Sigma v model    0.773 | Monte Carlo    0.818
+Sigma_t^-1 Z computed for the 50 trailing steps
+
+[gap0.5abs] object share of [-1,1] 1.055 | kappa iid-formula [5.52 5.35 4.53] | kappa MR-trained, iid input [3.1  3.06 2.56]
+  p=(0.6, 0.3, 0.1) iid: seed-mean 1-step s [0.39  0.389 0.221] sd [0.408 0.399 0.328] | q(50) [0.386 0.391 0.223] | max|q-s| 0.005 | P(final=1-step argmax) 0.983 | valid at 1 step 0.233 (max weight > 0.9: 0.53) | valid at 50 1.00
+  p=(0.6, 0.3, 0.1) mr : seed-mean 1-step s [0.605 0.297 0.098] sd [0.353 0.319 0.179] | q(50) [0.628 0.288 0.084] | max|q-s| 0.023 | P(final=1-step argmax) 0.974 | valid at 1 step 0.111 (max weight > 0.9: 0.40) | valid at 50 1.00
+  p=(0.4, 0.35, 0.25) iid: seed-mean 1-step s [0.328 0.381 0.291] sd [0.39  0.395 0.363] | q(50) [0.325 0.383 0.293] | max|q-s| 0.003 | P(final=1-step argmax) 0.992 | valid at 1 step 0.218 (max weight > 0.9: 0.52) | valid at 50 1.00
+  p=(0.4, 0.35, 0.25) mr : seed-mean 1-step s [0.511 0.317 0.173] sd [0.361 0.32  0.242] | q(50) [0.537 0.311 0.152] | max|q-s| 0.026 | P(final=1-step argmax) 0.983 | valid at 1 step 0.069 (max weight > 0.9: 0.32) | valid at 50 1.00
+
+[gap1T] object share of [-1,1] 0.545 | kappa iid-formula [3.81 3.72 3.45] | kappa MR-trained, iid input [2.27 2.22 2.04]
+  p=(0.6, 0.3, 0.1) iid: seed-mean 1-step s [0.456 0.355 0.189] sd [0.382 0.361 0.28 ] | q(50) [0.447 0.358 0.195] | max|q-s| 0.009 | P(final=1-step argmax) 0.967 | valid at 1 step 0.114 (max weight > 0.9: 0.41) | valid at 50 1.00
+  p=(0.6, 0.3, 0.1) mr : seed-mean 1-step s [0.546 0.324 0.131] sd [0.317 0.288 0.181] | q(50) [0.558 0.322 0.12 ] | max|q-s| 0.012 | P(final=1-step argmax) 0.944 | valid at 1 step 0.020 (max weight > 0.9: 0.23) | valid at 50 1.00
+  p=(0.4, 0.35, 0.25) iid: seed-mean 1-step s [0.368 0.356 0.277] sd [0.367 0.358 0.328] | q(50) [0.367 0.355 0.277] | max|q-s| 0.001 | P(final=1-step argmax) 0.988 | valid at 1 step 0.093 (max weight > 0.9: 0.37) | valid at 50 1.00
+  p=(0.4, 0.35, 0.25) mr : seed-mean 1-step s [0.421 0.341 0.238] sd [0.312 0.288 0.247] | q(50) [0.438 0.34  0.221] | max|q-s| 0.018 | P(final=1-step argmax) 0.970 | valid at 1 step 0.008 (max weight > 0.9: 0.15) | valid at 50 1.00
+
+[gap3.2T] object share of [-1,1] 0.256 | kappa iid-formula [2.71 2.68 2.54] | kappa MR-trained, iid input [1.74 1.73 1.6 ]
+  p=(0.6, 0.3, 0.1) iid: seed-mean 1-step s [0.518 0.323 0.159] sd [0.343 0.314 0.225] | q(50) [0.51  0.323 0.167] | max|q-s| 0.008 | P(final=1-step argmax) 0.940 | valid at 1 step 0.044 (max weight > 0.9: 0.28) | valid at 50 1.00
+  p=(0.6, 0.3, 0.1) mr : seed-mean 1-step s [0.531 0.329 0.14 ] sd [0.278 0.251 0.159] | q(50) [0.531 0.329 0.14 ] | max|q-s| 0.001 | P(final=1-step argmax) 0.899 | valid at 1 step 0.002 (max weight > 0.9: 0.11) | valid at 50 1.00
+  p=(0.4, 0.35, 0.25) iid: seed-mean 1-step s [0.403 0.332 0.264] sd [0.333 0.313 0.285] | q(50) [0.406 0.329 0.264] | max|q-s| 0.003 | P(final=1-step argmax) 0.980 | valid at 1 step 0.024 (max weight > 0.9: 0.22) | valid at 50 1.00
+  p=(0.4, 0.35, 0.25) mr : seed-mean 1-step s [0.386 0.345 0.27 ] sd [0.266 0.247 0.224] | q(50) [0.395 0.342 0.262] | max|q-s| 0.009 | P(final=1-step argmax) 0.955 | valid at 1 step 0.000 (max weight > 0.9: 0.05) | valid at 50 1.00
+
+[gap7.8T] object share of [-1,1] 0.122 | kappa iid-formula [1.94 1.94 1.85] | kappa MR-trained, iid input [1.37 1.41 1.32]
+  p=(0.6, 0.3, 0.1) iid: seed-mean 1-step s [0.557 0.307 0.136] sd [0.293 0.265 0.171] | q(50) [0.549 0.304 0.147] | max|q-s| 0.011 | P(final=1-step argmax) 0.899 | valid at 1 step 0.009 (max weight > 0.9: 0.17) | valid at 50 1.00
+  p=(0.6, 0.3, 0.1) mr : seed-mean 1-step s [0.539 0.323 0.138] sd [0.241 0.216 0.134] | q(50) [0.53  0.321 0.149] | max|q-s| 0.011 | P(final=1-step argmax) 0.852 | valid at 1 step 0.000 (max weight > 0.9: 0.06) | valid at 50 1.00
+  p=(0.4, 0.35, 0.25) iid: seed-mean 1-step s [0.418 0.325 0.257] sd [0.288 0.265 0.239] | q(50) [0.428 0.317 0.255] | max|q-s| 0.010 | P(final=1-step argmax) 0.965 | valid at 1 step 0.002 (max weight > 0.9: 0.10) | valid at 50 1.00
+  p=(0.4, 0.35, 0.25) mr : seed-mean 1-step s [0.378 0.343 0.279] sd [0.23  0.214 0.199] | q(50) [0.373 0.337 0.29 ] | max|q-s| 0.011 | P(final=1-step argmax) 0.933 | valid at 1 step 0.000 (max weight > 0.9: 0.02) | valid at 50 1.00
+
+[gap15T] object share of [-1,1] 0.067 | kappa iid-formula [1.44 1.47 1.39] | kappa MR-trained, iid input [1.14 1.23 1.12]
+  p=(0.6, 0.3, 0.1) iid: seed-mean 1-step s [0.58  0.298 0.122] sd [0.246 0.218 0.131] | q(50) [0.574 0.292 0.134] | max|q-s| 0.012 | P(final=1-step argmax) 0.849 | valid at 1 step 0.001 (max weight > 0.9: 0.09) | valid at 50 1.00
+  p=(0.6, 0.3, 0.1) mr : seed-mean 1-step s [0.552 0.315 0.133] sd [0.215 0.187 0.118] | q(50) [0.541 0.31  0.149] | max|q-s| 0.016 | P(final=1-step argmax) 0.816 | valid at 1 step 0.000 (max weight > 0.9: 0.03) | valid at 50 1.00
+  p=(0.4, 0.35, 0.25) iid: seed-mean 1-step s [0.422 0.325 0.253] sd [0.244 0.22  0.199] | q(50) [0.437 0.31  0.253] | max|q-s| 0.015 | P(final=1-step argmax) 0.942 | valid at 1 step 0.000 (max weight > 0.9: 0.03) | valid at 50 1.00
+  p=(0.4, 0.35, 0.25) mr : seed-mean 1-step s [0.383 0.339 0.278] sd [0.207 0.186 0.181] | q(50) [0.379 0.33  0.291] | max|q-s| 0.013 | P(final=1-step argmax) 0.916 | valid at 1 step 0.000 (max weight > 0.9: 0.01) | valid at 50 1.00

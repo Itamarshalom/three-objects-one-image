@@ -1,0 +1,15 @@
+gauge = median; gap = 1.0 T, wall at 13.20; foreground share 0.291; object depth range 9.21
+(i) full-frame Gram: c = 2.422, gamma = +35.358 (gamma > 0 means a shared component dominates)
+    p=(+0.600, +0.300, +0.100)  LS-SSI-L2 optimum split = (+0.606, +0.297, +0.098)
+    p=(+0.400, +0.350, +0.250)  LS-SSI-L2 optimum split = (+0.401, +0.350, +0.248)
+    p=(+0.333, +0.333, +0.333)  LS-SSI-L2 optimum split = (+0.333, +0.333, +0.333)
+    p=(+0.450, +0.450, +0.100)  LS-SSI-L2 optimum split = (+0.451, +0.451, +0.098)
+(ii) normalised targets: median/MAD of raw full maps: [13.196 13.196 13.196] [3.8389 3.8391 3.8392]
+    p=(+0.600, +0.300, +0.100) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.11656 vs relaxed bound 0.11656; split=(+1.000, +0.000, -0.000)
+    p=(+0.400, +0.350, +0.250) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.14570 vs relaxed bound 0.14570; split=(+0.334, +0.333, +0.333)
+    p=(+0.333, +0.333, +0.333) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.14571 vs relaxed bound 0.14571; split=(+0.334, +0.333, +0.333)
+    p=(+0.450, +0.450, +0.100) pointwise median: median=+0.0000 MAD=1.0000 -> loss after normalising 0.14573 vs relaxed bound 0.14573; split=(+0.334, +0.333, +0.333)
+(iii) p=(+0.600, +0.300, +0.100) DAv2 loss of candidates: obj1=0.2320, obj2=0.4086, obj3=0.5109, mean=0.2825, pointwise median=0.2320 | best half-bar maps [(0.232, (0, 0, 0, 0, 0, 0)), (0.2862, (2, 2, 0, 0, 0, 0)), (0.2871, (2, 0, 0, 0, 0, 0))] (7s)
+(iii) p=(+0.400, +0.350, +0.250) DAv2 loss of candidates: obj1=0.3458, obj2=0.3778, obj3=0.4268, mean=0.3080, pointwise median=0.2998 | best half-bar maps [(0.2998, (2, 2, 0, 0, 1, 1)), (0.3136, (1, 1, 2, 2, 0, 0)), (0.3266, (0, 0, 1, 1, 2, 2))] (7s)
+(iii) p=(+0.333, +0.333, +0.333) DAv2 loss of candidates: obj1=0.3831, obj2=0.3867, obj3=0.3796, mean=0.2994, pointwise median=0.2993 | best half-bar maps [(0.2993, (2, 2, 0, 0, 1, 1)), (0.3131, (1, 1, 2, 2, 0, 0)), (0.3262, (0, 0, 1, 1, 2, 2))] (7s)
+(iii) p=(+0.450, +0.450, +0.100) DAv2 loss of candidates: obj1=0.3198, obj2=0.3208, obj3=0.5125, mean=0.3056, pointwise median=0.3014 | best half-bar maps [(0.3014, (2, 2, 0, 0, 1, 1)), (0.3139, (2, 2, 0, 0, 0, 0)), (0.3153, (1, 1, 2, 2, 0, 0))] (7s)

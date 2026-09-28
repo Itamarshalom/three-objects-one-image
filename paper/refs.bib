@@ -1,0 +1,503 @@
+% refs.bib -- verified 24/09/2026 against arXiv API / venue pages / Crossref (re-checked 25/09/2026).
+% Each entry: "% verified: <url>" (title, authors, year, venue checked there).
+% plainnat sentence-cases titles, so proper nouns and acronyms in titles are braced.
+% plainnat ignores eprint/archivePrefix, so arXiv-only entries also carry howpublished.
+
+%% ---------------- closest work ----------------
+
+% verified: https://proceedings.neurips.cc/paper_files/paper/2024/hash/3d4dc72d715bd6415d356293079adf3d-Abstract-Conference.html ; https://arxiv.org/abs/2405.14530
+@inproceedings{han2024multistable,
+  title     = {Multistable Shape from Shading Emerges from Patch Diffusion},
+  author    = {Han, Xinran Nicole and Zickler, Todd and Nishino, Ko},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2024},
+  note      = {arXiv:2405.14530}
+}
+
+% verified: https://pair-code.github.io/depth-maps-art-and-illusions/art_history_vis/blogpost/blogpost_2.html
+% page is undated; year from the GitHub history of blogpost_2.html (commits 2019-11-08 to 2019-11-21),
+% https://github.com/PAIR-code/depth-maps-art-and-illusions/commits/master/art_history_vis/blogpost/blogpost_2.html
+@misc{jiang2019illusions,
+  title        = {Illusions for Depth Models and Illusions for Humans},
+  author       = {Jiang, Ellen and Reif, Emily and Kim, Been},
+  howpublished = {Google PAIR blog post, \url{https://pair-code.github.io/depth-maps-art-and-illusions/art_history_vis/blogpost/blogpost_2.html}},
+  year         = {2019},
+  note         = {Accessed 24 Sep 2026}
+}
+
+% verified: https://proceedings.neurips.cc/paper_files/paper/2024/hash/26cfdcd8fe6fd75cc53e92963a656c58-Abstract-Conference.html ; https://arxiv.org/abs/2406.09414
+@inproceedings{yang2024dav2,
+  title     = {{Depth Anything V2}},
+  author    = {Yang, Lihe and Kang, Bingyi and Huang, Zilong and Zhao, Zhen and Xu, Xiaogang and Feng, Jiashi and Zhao, Hengshuang},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2024},
+  note      = {arXiv:2406.09414}
+}
+
+% verified: https://arxiv.org/abs/2401.10891 ; https://doi.org/10.1109/CVPR52733.2024.00987 (Crossref)
+@inproceedings{yang2024dav1,
+  title     = {{Depth Anything}: Unleashing the Power of Large-Scale Unlabeled Data},
+  author    = {Yang, Lihe and Kang, Bingyi and Huang, Zilong and Xu, Xiaogang and Feng, Jiashi and Zhao, Hengshuang},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {10371--10381},
+  year      = {2024}
+}
+
+% verified: https://arxiv.org/abs/1907.01341 ; https://doi.org/10.1109/TPAMI.2020.3019967 (Crossref: vol 44, no 3, 2022)
+@article{ranftl2022midas,
+  title   = {Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-Shot Cross-Dataset Transfer},
+  author  = {Ranftl, Ren{\'e} and Lasinger, Katrin and Hafner, David and Schindler, Konrad and Koltun, Vladlen},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  volume  = {44},
+  number  = {3},
+  pages   = {1623--1637},
+  year    = {2022},
+  doi     = {10.1109/TPAMI.2020.3019967}
+}
+
+% verified: https://arxiv.org/abs/2103.13413 ; https://doi.org/10.1109/ICCV48922.2021.01196 (Crossref)
+% pages are the Crossref/IEEE ones; the CVF open-access page gives 12179--12188
+@inproceedings{ranftl2021dpt,
+  title     = {Vision Transformers for Dense Prediction},
+  author    = {Ranftl, Ren{\'e} and Bochkovskiy, Alexey and Koltun, Vladlen},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pages     = {12159--12168},
+  year      = {2021},
+  doi       = {10.1109/ICCV48922.2021.01196}
+}
+
+% verified: https://arxiv.org/abs/2302.12288 (no venue on arXiv, DBLP key journals/corr/abs-2302-12288 via Semantic Scholar; cited as arXiv)
+@misc{bhat2023zoedepth,
+  title         = {{ZoeDepth}: Zero-shot Transfer by Combining Relative and Metric Depth},
+  author        = {Bhat, Shariq Farooq and Birkl, Reiner and Wofk, Diana and Wonka, Peter and M{\"u}ller, Matthias},
+  howpublished  = {arXiv preprint arXiv:2302.12288},
+  year          = {2023},
+  eprint        = {2302.12288},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV}
+}
+
+% verified: https://arxiv.org/abs/2312.02145 ; https://doi.org/10.1109/CVPR52733.2024.00907 (Crossref)
+@inproceedings{ke2024marigold,
+  title     = {Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation},
+  author    = {Ke, Bingxin and Obukhov, Anton and Huang, Shengyu and Metzger, Nando and Caye Daudt, Rodrigo and Schindler, Konrad},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {9492--9502},
+  year      = {2024}
+}
+
+% verified: https://arxiv.org/abs/2505.09358 (journal extension) ; https://doi.org/10.1109/TPAMI.2025.3591076 (Crossref: TPAMI 2025, pp. 1-18,
+% early access, no volume/issue assigned yet)
+@article{ke2025marigold,
+  title   = {{Marigold}: Affordable Adaptation of Diffusion-Based Image Generators for Image Analysis},
+  author  = {Ke, Bingxin and Qu, Kevin and Wang, Tianfu and Metzger, Nando and Huang, Shengyu and Li, Bo and Obukhov, Anton and Schindler, Konrad},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  pages   = {1--18},
+  year    = {2025},
+  doi     = {10.1109/TPAMI.2025.3591076}
+}
+
+% verified: https://iclr.cc/virtual/2025/poster/28092 ; https://arxiv.org/abs/2409.18124
+@inproceedings{he2025lotus,
+  title     = {{Lotus}: Diffusion-based Visual Foundation Model for High-quality Dense Prediction},
+  author    = {He, Jing and Li, Haodong and Yin, Wei and Liang, Yixun and Li, Leheng and Zhou, Kaiqiang and Zhang, Hongbo and Liu, Bingbing and Chen, Ying-Cong},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2025},
+  note      = {arXiv:2409.18124}
+}
+
+% verified: https://openaccess.thecvf.com/content/WACV2025/html/Garcia_Fine-Tuning_Image-Conditional_Diffusion_Models_is_Easier_than_You_Think_WACV_2025_paper.html ; https://arxiv.org/abs/2409.11355
+% note: arXiv lists "Karim Knaebel"; the WACV/CVF page and Crossref list "Karim Abou Zeid" (venue version used)
+@inproceedings{garcia2025finetuning,
+  title     = {Fine-Tuning Image-Conditional Diffusion Models is Easier than You Think},
+  author    = {Martin Garcia, Gonzalo and Abou Zeid, Karim and Schmidt, Christian and de Geus, Daan and Hermans, Alexander and Leibe, Bastian},
+  booktitle = {Proceedings of the Winter Conference on Applications of Computer Vision (WACV)},
+  pages     = {753--762},
+  year      = {2025}
+}
+
+% verified: https://openaccess.thecvf.com/content_ICCV_2019/html/van_Dijk_How_Do_Neural_Networks_See_Depth_in_Single_Images_ICCV_2019_paper.html ; https://arxiv.org/abs/1905.07005
+@inproceedings{vandijk2019how,
+  title     = {How Do Neural Networks See Depth in Single Images?},
+  author    = {van Dijk, Tom and de Croon, Guido},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pages     = {2183--2191},
+  year      = {2019}
+}
+
+%% ---------------- impossible / ambiguous figures and networks ----------------
+
+% verified: https://doi.org/10.1016/j.visres.2021.09.004 (Crossref)
+@article{heinke2021failure,
+  title   = {A Failure to Learn Object Shape Geometry: Implications for Convolutional Neural Networks as Plausible Models of Biological Vision},
+  author  = {Heinke, Dietmar and Wachman, Peter and van Zoest, Wieske and Leek, E. Charles},
+  journal = {Vision Research},
+  volume  = {189},
+  pages   = {81--92},
+  year    = {2021},
+  doi     = {10.1016/j.visres.2021.09.004}
+}
+
+% verified: https://arxiv.org/abs/2604.13549 (no venue on arXiv or Semantic Scholar; cited as arXiv)
+@misc{cao2026wireframe,
+  title         = {Reconstruction of a {3D} Wireframe from a Single Line Drawing via Generative Depth Estimation},
+  author        = {Cao, Elton and Lipson, Hod},
+  howpublished  = {arXiv preprint arXiv:2604.13549},
+  year          = {2026},
+  eprint        = {2604.13549},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV}
+}
+
+% verified: https://arxiv.org/abs/2606.29600 (arXiv comment: "Accepted by European Conference on Computer Vision (ECCV) 2026")
+@inproceedings{xu2026onescene,
+  title     = {One Scene, Two Depths: Probing Geometric Ambiguity in Monocular Foundation Models},
+  author    = {Xu, Xiaohao and Xue, Feng and Li, Xiang and Li, Haowei and Yang, Shusheng and Zhang, Tianyi and Johnson-Roberson, Matthew and Huang, Xiaonan},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026},
+  note      = {arXiv:2606.29600}
+}
+
+% verified: https://arxiv.org/abs/2505.13061 (comment: NeurIPS 2025); https://neurips.cc/virtual/2025/poster/115511
+@inproceedings{yao2025illusion,
+  title     = {{3D} Visual Illusion Depth Estimation},
+  author    = {Yao, Chengtang and Liu, Zhidan and Zeng, Jiaxi and Yu, Lidong and Wu, Yuwei and Jia, Yunde},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2025},
+  note      = {arXiv:2505.13061}
+}
+
+% verified: https://arxiv.org/abs/2512.15423 (v2 comment: "Accepted to ECCV 2026")
+@inproceedings{nguyen2026mirage,
+  title     = {The {3D Mirage}: Probing and Taming {3D} Hallucinations},
+  author    = {Nguyen, Hoang and Xu, Xiaohao and Huang, Xiaonan},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026},
+  note      = {arXiv:2512.15423}
+}
+
+% verified: https://arxiv.org/abs/2606.02552 (no venue on arXiv or Semantic Scholar; cited as arXiv)
+@misc{bian2026mda,
+  title         = {Modeling Depth Ambiguity: A Mixture-Density Representation for Flying-Point-Free Depth Estimation},
+  author        = {Bian, Siyuan and Xu, Congrong and Gao, Jun},
+  howpublished  = {arXiv preprint arXiv:2606.02552},
+  year          = {2026},
+  eprint        = {2606.02552},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV}
+}
+
+% verified: https://arxiv.org/abs/2104.03866 ; https://doi.org/10.1109/CVPR46437.2021.00883 (Crossref)
+@inproceedings{tosi2021smdnets,
+  title     = {{SMD-Nets}: Stereo Mixture Density Networks},
+  author    = {Tosi, Fabio and Liao, Yiyi and Schmitt, Carolin and Geiger, Andreas},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {8938--8948},
+  year      = {2021}
+}
+
+% verified: https://arxiv.org/abs/2403.15952 ; https://openreview.net/forum?id=7ysaJGs7zY (venue: COLM 2024 Conference)
+@inproceedings{shahgir2024illusionvqa,
+  title     = {{IllusionVQA}: A Challenging Optical Illusion Dataset for Vision Language Models},
+  author    = {Shahgir, Haz Sameen and Sayeed, Khondker Salman and Bhattacharjee, Abhik and Ahmad, Wasi Uddin and Dong, Yue and Shahriyar, Rifat},
+  booktitle = {Conference on Language Modeling (COLM)},
+  year      = {2024},
+  note      = {arXiv:2403.15952}
+}
+
+% verified: https://doi.org/10.1145/3731422 (Crossref: TOG 44(4)); https://arxiv.org/abs/2605.14960
+@article{dodik2025meschers,
+  title   = {{Meschers}: Geometry Processing of Impossible Objects},
+  author  = {Dodik, Ana and Yu, Isabella and Chandra, Kartik and Ragan-Kelley, Jonathan and Tenenbaum, Joshua and Sitzmann, Vincent and Solomon, Justin},
+  journal = {ACM Transactions on Graphics},
+  volume  = {44},
+  number  = {4},
+  year    = {2025},
+  doi     = {10.1145/3731422}
+}
+
+% verified: https://arxiv.org/abs/2602.09313 (no venue on arXiv or Semantic Scholar; cited as arXiv)
+@misc{ghrist2026impossible,
+  title         = {Impossible by Degrees: Cohomology \& Bistable Visual Paradox},
+  author        = {Ghrist, Lewis and Ghrist, Robert},
+  howpublished  = {arXiv preprint arXiv:2602.09313},
+  year          = {2026},
+  eprint        = {2602.09313},
+  archivePrefix = {arXiv},
+  primaryClass  = {math.AT}
+}
+
+%% ---------------- human vision / classics ----------------
+
+% verified: https://doi.org/10.1111/j.2044-8295.1958.tb00634.x (Crossref)
+@article{penrose1958impossible,
+  title   = {Impossible Objects: A Special Type of Visual Illusion},
+  author  = {Penrose, Lionel S. and Penrose, Roger},
+  journal = {British Journal of Psychology},
+  volume  = {49},
+  number  = {1},
+  pages   = {31--33},
+  year    = {1958},
+  doi     = {10.1111/j.2044-8295.1958.tb00634.x}
+}
+
+% verified: https://doi.org/10.2307/1575844 (Crossref: Leonardo 25(3/4), start page 245; pages 245-247 per Semantic Scholar)
+@article{penrose1992cohomology,
+  title   = {On the Cohomology of Impossible Figures},
+  author  = {Penrose, Roger},
+  journal = {Leonardo},
+  volume  = {25},
+  number  = {3/4},
+  pages   = {245--247},
+  year    = {1992},
+  doi     = {10.2307/1575844}
+}
+
+% verified: https://doi.org/10.1098/rstb.1997.0095 (Crossref)
+@article{gregory1997knowledge,
+  title   = {Knowledge in Perception and Illusion},
+  author  = {Gregory, Richard L.},
+  journal = {Philosophical Transactions of the Royal Society of London. Series B: Biological Sciences},
+  volume  = {352},
+  number  = {1358},
+  pages   = {1121--1127},
+  year    = {1997},
+  doi     = {10.1098/rstb.1997.0095}
+}
+
+% verified: https://doi.org/10.1007/978-3-540-46515-7_27 (Crossref) ; LNCS vol. 1763 per https://link.springer.com/book/10.1007/b75044 ;
+% editors per Crossref record of the book, https://doi.org/10.1007/b75044
+@inproceedings{sugihara2000impossible,
+  title     = {``{Impossible} Objects'' Are Not Necessarily Impossible -- Mathematical Study on Optical Illusion},
+  author    = {Sugihara, Kokichi},
+  booktitle = {Discrete and Computational Geometry (JCDCG 1998)},
+  editor    = {Akiyama, Jin and Kano, Mikio and Urabe, Masatsugu},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {1763},
+  publisher = {Springer},
+  pages     = {305--316},
+  year      = {2000},
+  doi       = {10.1007/978-3-540-46515-7_27}
+}
+
+%% ---------------- mean vs median, one step vs many ----------------
+
+% verified: https://arxiv.org/abs/1711.06077 ; https://doi.org/10.1109/CVPR.2018.00652 (Crossref)
+@inproceedings{blau2018perception,
+  title     = {The Perception-Distortion Tradeoff},
+  author    = {Blau, Yochai and Michaeli, Tomer},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {6228--6237},
+  year      = {2018}
+}
+
+% verified: https://arxiv.org/abs/2303.11435 (journal-ref: TMLR 2023)
+@article{delbracio2023indi,
+  title   = {Inversion by Direct Iteration: An Alternative to Denoising Diffusion for Image Restoration},
+  author  = {Delbracio, Mauricio and Milanfar, Peyman},
+  journal = {Transactions on Machine Learning Research},
+  year    = {2023}
+}
+
+% verified: https://arxiv.org/abs/2410.00418 (comment: "Accepted to ICLR 2025")
+@inproceedings{ohayon2025pmrf,
+  title     = {Posterior-Mean Rectified Flow: Towards Minimum {MSE} Photo-Realistic Image Restoration},
+  author    = {Ohayon, Guy and Michaeli, Tomer and Elad, Michael},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2025}
+}
+
+% verified: https://arxiv.org/abs/2512.01030 (no venue on arXiv or Semantic Scholar; cited as arXiv)
+@misc{he2025lotus2,
+  title         = {{Lotus-2}: Advancing Geometric Dense Prediction with Powerful Image Generative Model},
+  author        = {He, Jing and Li, Haodong and Sheng, Mingzhi and Chen, Ying-Cong},
+  howpublished  = {arXiv preprint arXiv:2512.01030},
+  year          = {2025},
+  eprint        = {2512.01030},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV}
+}
+
+% verified: https://arxiv.org/abs/2504.11457 (journal-ref: ICLR 2025)
+@inproceedings{pang2025aligning,
+  title     = {Aligning Generative Denoising with Discriminative Objectives Unleashes Diffusion for Visual Perception},
+  author    = {Pang, Ziqi and Xu, Xin and Wang, Yu-Xiong},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2025}
+}
+
+% verified: https://openreview.net/forum?id=BgYbk6ZmeX ; https://arxiv.org/abs/2403.06090
+@inproceedings{xu2025genpercept,
+  title     = {What Matters When Repurposing Diffusion Models for General Dense Perception Tasks?},
+  author    = {Xu, Guangkai and Ge, Yongtao and Liu, Mingyu and Fan, Chengxiang and Xie, Kangyang and Zhao, Zhiyue and Chen, Hao and Shen, Chunhua},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2025}
+}
+
+% verified: https://arxiv.org/abs/2406.16864 ; https://doi.org/10.1145/3687971 (Crossref: TOG 43(6), 2024; article number not in Crossref, omitted)
+@article{ye2024stablenormal,
+  title   = {{StableNormal}: Reducing Diffusion Variance for Stable and Sharp Normal},
+  author  = {Ye, Chongjie and Qiu, Lingteng and Gu, Xiaodong and Zuo, Qi and Wu, Yushuang and Dong, Zilong and Bo, Liefeng and Xiu, Yuliang and Han, Xiaoguang},
+  journal = {ACM Transactions on Graphics},
+  volume  = {43},
+  number  = {6},
+  year    = {2024},
+  doi     = {10.1145/3687971}
+}
+
+% verified: https://arxiv.org/abs/2302.14816 (no venue on arXiv or Semantic Scholar; cited as arXiv)
+@misc{saxena2023depthgen,
+  title         = {Monocular Depth Estimation using Diffusion Models},
+  author        = {Saxena, Saurabh and Kar, Abhishek and Norouzi, Mohammad and Fleet, David J.},
+  howpublished  = {arXiv preprint arXiv:2302.14816},
+  year          = {2023},
+  eprint        = {2302.14816},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV}
+}
+
+% verified: https://arxiv.org/abs/2306.01923 (comment: "NeurIPS 2023 (Oral)")
+@inproceedings{saxena2023ddvm,
+  title     = {The Surprising Effectiveness of Diffusion Models for Optical Flow and Monocular Depth Estimation},
+  author    = {Saxena, Saurabh and Herrmann, Charles and Hur, Junhwa and Kar, Abhishek and Norouzi, Mohammad and Sun, Deqing and Fleet, David J.},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2023}
+}
+
+% verified: https://doi.org/10.1198/jasa.2011.tm11181 (Crossref)
+@article{efron2011tweedie,
+  title   = {{Tweedie's} Formula and Selection Bias},
+  author  = {Efron, Bradley},
+  journal = {Journal of the American Statistical Association},
+  volume  = {106},
+  number  = {496},
+  pages   = {1602--1614},
+  year    = {2011},
+  doi     = {10.1198/jasa.2011.tm11181}
+}
+
+% verified: https://arxiv.org/abs/2006.11239 (venue per Semantic Scholar record and Han et al. ref list: NeurIPS 33, pp. 6840-6851)
+@inproceedings{ho2020ddpm,
+  title     = {Denoising Diffusion Probabilistic Models},
+  author    = {Ho, Jonathan and Jain, Ajay and Abbeel, Pieter},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  volume    = {33},
+  pages     = {6840--6851},
+  year      = {2020}
+}
+
+% verified: https://arxiv.org/abs/2010.02502 (comment: "ICLR 2021"; authors re-checked 25/09/2026)
+@inproceedings{song2021ddim,
+  title     = {Denoising Diffusion Implicit Models},
+  author    = {Song, Jiaming and Meng, Chenlin and Ermon, Stefano},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2021}
+}
+
+% verified: https://arxiv.org/abs/2112.10752 (comment: "CVPR 2022") ; https://doi.org/10.1109/CVPR52688.2022.01042 (Crossref)
+% pages are the Crossref/IEEE ones; the CVF open-access page gives 10684--10695
+@inproceedings{rombach2022ldm,
+  title     = {High-Resolution Image Synthesis with Latent Diffusion Models},
+  author    = {Rombach, Robin and Blattmann, Andreas and Lorenz, Dominik and Esser, Patrick and Ommer, Bj{\"o}rn},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {10674--10685},
+  year      = {2022},
+  doi       = {10.1109/CVPR52688.2022.01042}
+}
+
+% verified: https://arxiv.org/abs/2206.00364 (comment: "NeurIPS 2022")
+@inproceedings{karras2022edm,
+  title     = {Elucidating the Design Space of Diffusion-Based Generative Models},
+  author    = {Karras, Tero and Aittala, Miika and Aila, Timo and Laine, Samuli},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2022}
+}
+
+% verified: https://arxiv.org/abs/2305.08891 ; https://doi.org/10.1109/WACV57701.2024.00532 (Crossref)
+@inproceedings{lin2024flawed,
+  title     = {Common Diffusion Noise Schedules and Sample Steps are Flawed},
+  author    = {Lin, Shanchuan and Liu, Bingchen and Li, Jiashi and Yang, Xiao},
+  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  pages     = {5392--5399},
+  year      = {2024}
+}
+
+% verified: https://arxiv.org/abs/2202.00512 (comment: "Published as a conference paper at ICLR 2022")
+@inproceedings{salimans2022progressive,
+  title     = {Progressive Distillation for Fast Sampling of Diffusion Models},
+  author    = {Salimans, Tim and Ho, Jonathan},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2022}
+}
+
+% verified: https://arxiv.org/abs/1612.00197 ; https://doi.org/10.1109/ICCV.2017.388 (Crossref)
+@inproceedings{rupprecht2017uncertain,
+  title     = {Learning in an Uncertain World: Representing Ambiguity Through Multiple Hypotheses},
+  author    = {Rupprecht, Christian and Laina, Iro and DiPietro, Robert and Baust, Maximilian and Tombari, Federico and Navab, Nassir and Hager, Gregory D.},
+  booktitle = {Proceedings of the IEEE International Conference on Computer Vision (ICCV)},
+  pages     = {3611--3620},
+  year      = {2017}
+}
+
+% verified: https://arxiv.org/abs/1603.08511 ; https://doi.org/10.1007/978-3-319-46487-9_40 (Crossref)
+@inproceedings{zhang2016colorful,
+  title     = {Colorful Image Colorization},
+  author    = {Zhang, Richard and Isola, Phillip and Efros, Alexei A.},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {9907},
+  pages     = {649--666},
+  year      = {2016},
+  doi       = {10.1007/978-3-319-46487-9_40}
+}
+
+% verified: https://arxiv.org/abs/1511.05440 (venue ICLR 2016 per Semantic Scholar record)
+@inproceedings{mathieu2016deep,
+  title     = {Deep Multi-Scale Video Prediction Beyond Mean Square Error},
+  author    = {Mathieu, Michael and Couprie, Camille and LeCun, Yann},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2016}
+}
+
+% verified: https://arxiv.org/abs/2609.09682 (preprint, 9 Sep 2026; no venue)
+@misc{saoud2026settling,
+  title         = {Settling: Equilibrium Inference for Non-Convex Validity Sets},
+  author        = {Saad Saoud, Lyes},
+  howpublished  = {arXiv preprint arXiv:2609.09682},
+  year          = {2026},
+  eprint        = {2609.09682},
+  archivePrefix = {arXiv}
+}
+
+% verified: https://www.nature.com/articles/368542a0
+@article{freeman1994generic,
+  title   = {The generic viewpoint assumption in a framework for visual perception},
+  author  = {Freeman, William T.},
+  journal = {Nature},
+  volume  = {368},
+  number  = {6471},
+  pages   = {542--545},
+  year    = {1994}
+}
+
+% verified: https://cir.nii.ac.jp/crid/1574231874229998208 ; https://www.semanticscholar.org/paper/Impossible-objects-as-nonsense-sentences-Huffman/d17ae64c1765bbe60f1d725359cc76bfc3f76ac1
+@incollection{huffman1971impossible,
+  title     = {Impossible Objects as Nonsense Sentences},
+  author    = {Huffman, David A.},
+  booktitle = {Machine Intelligence 6},
+  editor    = {Meltzer, Bernard and Michie, Donald},
+  publisher = {Edinburgh University Press},
+  pages     = {295--323},
+  year      = {1971}
+}
+
+% verified: https://www.sciencedirect.com/science/article/abs/pii/0004370271900051
+@article{clowes1971seeing,
+  title   = {On Seeing Things},
+  author  = {Clowes, Maxwell B.},
+  journal = {Artificial Intelligence},
+  volume  = {2},
+  number  = {1},
+  pages   = {79--116},
+  year    = {1971}
+}

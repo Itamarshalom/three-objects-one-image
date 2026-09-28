@@ -1,0 +1,23 @@
+# regenerable data and big outputs
+data/
+outputs/
+__pycache__/
+*.pyc
+.venv/
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+# written by the VM queue scripts
+queue.log
+sel_*/
+# large regenerable arrays written by the theory checks (their .json/.txt/.log summaries are not ignored)
+theory/opt/*.npy
+theory/opt7/*.npy
+theory/latents_*.npy
+theory/patch_*.npy
+theory/ssimse_results.npy
