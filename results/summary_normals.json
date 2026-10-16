@@ -1,0 +1,68 @@
+{
+ "mg11-n": {
+  "convention": "+++",
+  "cos_control": 0.9770620851911906,
+  "cos_impossible": 0.968606262730462,
+  "slope_control": -0.48742540592707273,
+  "slope_impossible": -0.4684229866461119,
+  "gain_impossible": 0.6624501406422427,
+  "share_with_objects_impossible": 0.9956597222222222,
+  "rel_tilt": [
+   0.9946187161040072,
+   0.9286198248413442,
+   1.2263705630786041
+  ],
+  "depth": {
+   "rel_tilt": [
+    -0.7280634701738227,
+    -1.7232410691754732,
+    1.1747203017118641
+   ],
+   "share_with_objects_impossible": 0.01171875
+  }
+ },
+ "e2eft-n": {
+  "convention": "-++",
+  "cos_control": 0.9803963265841811,
+  "cos_impossible": 0.9705642844663582,
+  "slope_control": -0.47554568245015216,
+  "slope_impossible": -0.38525774507755184,
+  "gain_impossible": 0.5448367280979504,
+  "share_with_objects_impossible": 0.9965277777777778,
+  "rel_tilt": [
+   0.8210478479817518,
+   0.7573438909916079,
+   0.9730600922146522
+  ],
+  "depth": {
+   "rel_tilt": [
+    -0.7020779475642058,
+    -1.5414275634320664,
+    11.227786156294785
+   ],
+   "share_with_objects_impossible": 0.0
+  }
+ },
+ "lotus-d-n": {
+  "convention": "-++",
+  "cos_control": 0.9622886950413128,
+  "cos_impossible": 0.9525551930810701,
+  "slope_control": -0.2646805027181494,
+  "slope_impossible": -0.2199357535871232,
+  "gain_impossible": 0.31103612557365673,
+  "share_with_objects_impossible": 0.9965277777777778,
+  "rel_tilt": [
+   0.8262693704733219,
+   0.7483381084090766,
+   0.9354113362283779
+  ],
+  "depth": {
+   "rel_tilt": [
+    -1.056842338992447,
+    -1.9604580731971795,
+    -0.6788302000804882
+   ],
+   "share_with_objects_impossible": 0.006944444444444444
+  }
+ }
+}

@@ -1,0 +1,244 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+\usepackage[margin=0.72in,columnsep=0.26in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\graphicspath{{../figures/out/}}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\hypersetup{pdftitle={Three Objects, One Image: Why Depth Networks Distort the Impossible Triangle},
+  pdfauthor={Itamar Shalom, Yalli Lavi, Dotan Greenspan, Shalom Biton}}
+\usepackage[font=small,labelfont=bf]{caption}
+\setlength{\abovecaptionskip}{3pt}
+\setlength{\belowcaptionskip}{-3pt}
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}
+\setlength{\bibsep}{0pt plus 0.3ex}
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}{1.1ex \@plus.4ex \@minus.2ex}{-1em}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\section{\@startsection{section}{1}{\z@}{-2.2ex \@plus -.5ex \@minus -.2ex}{1.1ex \@plus.2ex}%
+  {\normalfont\Large\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}{-2ex\@plus -.5ex \@minus -.2ex}{.8ex \@plus .2ex}%
+  {\normalfont\large\bfseries}}
+\makeatother
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\raggedbottom
+\newcommand{\doi}[1]{doi:~\href{https://doi.org/#1}{\nolinkurl{#1}}}
+\renewcommand{\bibfont}{\footnotesize\raggedright}
+
+\title{\vspace{-0.55in}Three Objects, One Image:\\Why Depth Networks Distort the Impossible Triangle}
+\author{Itamar Shalom \quad Yalli Lavi \quad Dotan Greenspan \quad Shalom Biton\\
+{\small Modern Computer Vision, Technion \quad\textbullet\quad Code: \url{https://github.com/Itamarshalom/three-objects-one-image}}}
+\date{\vspace{-0.3in}}
+
+\begin{document}
+% Fig. 1 as a teaser under the title, as wide as a figure*: the "three objects, one image" picture on page 1
+\twocolumn[{%
+\renewcommand\twocolumn[1][]{#1}%
+\maketitle
+\vspace{-7pt}
+\centering
+\captionsetup{type=figure}
+\includegraphics[width=\textwidth]{fig_hero.pdf}
+\caption{\textbf{Three objects, one image.} Top: three valid objects (turned $12^\circ$ so their gaps show) give one
+image in the special view. Next to the image: the depth of Depth Anything V2-S (DA-S). Right: the output of a depth-change
+head on frozen DA-S, summed along the black walk from J1 or J2. Where the
+walk starts, the sum jumps by its total over one lap, as at an object's gap. Bottom: depth$/T$ over one lap, up is far
+(hollow: junction cubes). (i)~Object 1 comes nearer along each bar and goes back by $T$ at its gap. (ii)~DA-S makes
+only its ordinary step at each junction (excess tear $e_j\approx0$), so its bars flatten or reverse and the loop closes. Grey: control 1 (object 1, gap visible), torn at J1. (iii)~After one lap the head's sum is $0.94\,T$
+nearer (dashed: exact). Its median over the impossible images is the same. Over the bars alone its median is
+$\Gamma=0.96\,T$.}\label{fig:hero}
+\vspace{8pt}
+}]
+
+\begin{abstract}
+Depth networks distort the Penrose triangle. We show that they do so because they must output a
+depth map, and that a linear read-out of Depth Anything V2 gets the figure's corners and bars right. We build the triangle from
+cubes, so its image is pixel for pixel the image of three valid objects, each with its gap hidden at a different
+corner. Ten depth networks output none of them and bend the bars to flat or reversed slopes. The read-out,
+fitted only on possible scenes, keeps each bar's slope until the last decoder stages. In
+this read-out every bar comes nearer, by a total $T$ over one lap. It is known that a depth map cannot represent this, since depth must
+return to its start after a lap. Erasing one corner, or only blocking attention to it (on the cubes erasure leaves visible), removes most of the bend.
+Buildable rings of the same bars are mostly read correctly. We also train two heads on the same frozen features and scenes.
+The depth head bends the bars, as the networks do. The depth-change head keeps them. Its bars come $0.96\,T$ nearer
+per lap ($0.00$ on rings), and a cut at any corner gives the object with its gap there.
+\end{abstract}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{fig_main.pdf}
+\caption{\textbf{Results on the impossible loop.}
+\textbf{(a)}~Total excess tear $\sum_je_j$ on the intact impossible image. One object, or any mean of objects, gives 1. An ordinary step at every junction gives 0. The networks give $-0.19$ to $0.32$.
+\textbf{(b)}~Growth of the jump at a junction when we erase it, in bar changes. It is large on the Penrose loop
+(filled) and near 0 on closed rings (grey, hollow). Dashed: $T=3$, the size of a whole tear. Right of the grey line: our depth head (seeds 0 and 1), whose jump also grows.
+\textbf{(c)}~Slope ratio $\rho$ (impossible over control) of linear probes by layer in DA-S (solid) and DA-B (dashed). The depth-change probe (teal) stays near $+1$ until the last decoder stages. The depth probe (brown) is
+lower, and in the decoder it flattens the bars (DA-B) or reverses them (DA-S). Before their first point (L6, or L8 for
+depth), the probes find under 0.15 of the exact slope even on controls. Stars: the outputs of DA-S and DA-B.
+Right: three surface-normal networks (teal) stay near $+1$. Their depth twins (brown) reverse the bars.
+\textbf{(d)}~Matched heads on frozen DA-S. The rows give the bar slope over the exact slope (impossible images,
+controls), $\Gamma/T$ (impossible images, rings) and the share of cuts at junction $k$ that give object
+$k$. The exact value is 1 (dashed), or 0 on rings. The depth-change head is near exact in every row. The depth head is
+near 0 in the first four rows and, by construction, at 1/3 in the last. Bars and numbers are means of two seeds (dots).
+Points: medians with 95\% bootstrap intervals over rotations (IQRs in (b)). Carets: intervals past the axis.}
+\label{fig:main}
+\end{figure*}
+
+\section{Introduction}
+Each corner and bar of an impossible figure is a valid piece of a solid, and the conflict appears only around the
+loop~\cite{huffman1971impossible,clowes1971seeing}. In one special view, an open chain of three bars of cubes looks like
+the Penrose triangle, with its gap hidden at one of its corners (junctions J1--J3). If the bars are straight, the image has three valid readings, one per junction (Fig.~\ref{fig:hero}). Other solids give it
+too~\cite{sugihara2000impossible}. Internally, the depth networks we probe read this figure as people
+do~\cite{penrose1958impossible,kulpa1983impossible}. They read every junction as joined and every bar as coming nearer around the loop. These depth changes (a 1-form) sum to zero locally and to a total $T$ around the loop (in topology,
+closed but not exact~\cite{penrose1992cohomology,dodik2025meschers}). Depth must return to its start after a lap, so a
+depth map must cut the loop or bend the bars. A cut is one jump of $T$ (a tear), as at each valid object's gap. A bend
+spreads the mismatch over the bars, and all ten networks we test do this.
+
+It is known that no depth map can represent an impossible
+object~\cite{penrose1992cohomology,akleman2023inconsistent,dodik2025meschers}. Our three tests show that trained
+networks fail for this reason. A linear read-out of Depth Anything V2's features keeps every bar's slope until the last decoder
+stages. In all ten networks, erasing one junction removes most of the bend. On one frozen encoder with only possible training
+scenes, changing only the output from depth to depth changes keeps every bar's slope.
+Also, a network's depth is close to a least-squares fit of its local readings.
+
+\paragraph{Related work.}
+Meschers~\cite{dodik2025meschers} stores an impossible object as a mesh 1-form with a nonzero sum around
+the loop. It builds the object cut or bent (by least squares) and fits one to a Penrose triangle image. Its authors argue that people
+see such objects locally. Akleman et~al.~\cite{akleman2023inconsistent} note that depth maps cannot represent such shapes
+and non-conservative fields can. Depth networks have been probed with image
+edits~\cite{vandijk2019how}, frozen-feature read-outs~\cite{elbanani2024probing,danier2025depthcues} and
+illusions~\cite{yao2025illusion,nguyen2026mirage}. Jiang et~al.~\cite{jiang2019illusions} tested a depth network on
+impossible figures qualitatively. CNN classifiers fail to tell possible from impossible
+objects~\cite{heinke2021failure}.
+
+\section{Method}
+\subsection{Stimuli and measures}\label{sec:readout}
+The loop is a chain of 15 unit cubes, five steps each along $+x$, $+y$ and $+z$. Seen orthographically along
+$v=(1,1,1)/\sqrt3$, its end projects onto its start. Object $k$ has its gap at junction $k$ (corner cube $c_k$). Its cubes before $c_k$ move by $5(1,1,1)$, along $v$. So the three objects give one image, and
+\mbox{$d_k=d_1-T\,\mathbf 1[c<c_k]$}, with $d_k$ object $k$'s depth, $c$ the cube index and $T=5\sqrt3$. At
+the gap we trim the nearer bar's end by a prism parallel to $v$, so the three images are pixel-identical and each depth
+map is exact. We render 288 impossible images (24 in-plane rotations $5^\circ$ apart, $\times$ 3 shadings $\times$ 2
+textures $\times$ 2 chiralities), 48 possible controls (object $k$ untrimmed, gap visible) and 64 buildable closed rings
+of the same bars with every junction visible (skew hexagons, rhombi). Probes and heads are trained only on 1500 random
+possible scenes rendered like the stimuli, with one or two open chains of straight runs. They never contain the Penrose
+family or a hidden gap that looks like a junction, so every contact in the image is one in 3D.
+
+A cube's depth is the median output over its pixels at least 3\,px from its edge. We fit a line to each bar's four
+interior cubes. A bar has the right sign if its slope has the objects' sign. The slope ratio $\rho$, a bar's slope on
+the impossible image over that on its matched control, needs no calibration ($+1$ if unchanged, below 0 if reversed).
+The jump $\Delta_j$ at junction $j$ is the next bar's line minus the previous one, at $j$. Most outputs are known only
+up to shift and scale, so we measure each jump against the network's own controls. Let $r_j$ be its mean jump at $j$
+on the two controls where $j$ is joined, and $g_j$ its jump on the control whose gap is at $j$. The excess tear
+$e_j=(\Delta_j-r_j)/(g_j-r_j)$ is 0 for its ordinary step at a joined junction and 1 for its jump at a real gap. We
+also give jumps in bar changes, where one bar change is an output's mean depth change along one bar (in this unit, $T=3$).
+Rings have no gap controls (no $e_j$), so Fig.~\ref{fig:main}b uses this unit. The loop
+integral $\Gamma$ is how much nearer the three bars come over one lap, junctions left out, so it tests only the bars.
+For exact local depth changes it is $T$ on the impossible image and its controls, and 0 on rings.
+
+\begin{proposition}[Least-squares fit on a loop]\label{sec:theory}
+Fit one depth per cube to depth-change readings on the links of a loop of cubes, with weights $w_i>0$. If the readings
+sum to $m$ around the loop, the fit's error $\epsilon_i$ on link $i$ is the share $(1/w_i)/\sum_l(1/w_l)$ of $m$.
+\end{proposition}
+\noindent (Minimise $\sum_iw_i\epsilon_i^2$ subject to $\sum_i\epsilon_i=m$. This is standard in depth from normals, where sparse ($L_1$) estimators cut the
+loop~\cite{frankot1988enforcing,agrawal2006range,reddy2009enforcing,queau2018survey}.) Correct readings give $|m|=T$
+on the impossible loop and $m=0$ on a ring. With equal weights every $\epsilon_i$ is $m/15$, the bent shape
+of~\cite{dodik2025meschers}, so a link that reads $\delta_i$ keeps $\delta_i-m/15$. If all links read the same, the
+bars are flat. If junction links read larger changes than bar links, bar links read less than $m/15$ and the bars
+reverse. An erased junction (zero weight) gets the whole tear.
+Any answer built from the objects cuts ($\sum_je_j=1$) but needs an accidental view~\cite{freeman1994generic}.
+
+\subsection{Networks, probes and interventions}\label{sec:nets}
+We run ten frozen networks: Depth Anything V2 S/B/L \mbox{(DA-S/B/L)}~\cite{yang2024dav2}, MiDaS
+DPT-L~\cite{ranftl2021dpt,ranftl2022midas}, ZoeDepth~\cite{bhat2023zoedepth}, and, on the Stable Diffusion 2
+backbone~\cite{rombach2022ldm}, Lotus-D/G~\cite{he2025lotus}, Marigold E2E-FT~\cite{garcia2025finetuning} and Marigold
+v1.0/v1.1~\cite{ke2024marigold,ke2025marigold} (one denoising step). The generative ones run on 16 impossible images with several seeds. Marigold v1.1, E2E-FT and
+Lotus-D also come as surface-normal networks, each with a depth twin on the same backbone. A normal is the local surface tilt. Like depth changes, normals need not
+sum to zero around a loop. Ranges are over networks, and the repository lists each. \textit{Erasure} replaces junction
+$j$ (corner cube and adjoining bar ends) by the exact background. \textit{Gluing} tests
+Prop.~\ref{sec:theory} on network readings. It fits 15 cube depths by unweighted least squares to the mean
+cube-to-cube changes (in bar changes) of its outputs on the three erased images (open loops).
+
+\textit{Layer probes} are linear read-outs (ridge regressions) of the frozen tokens of DA-S and DA-B, at ViT blocks
+L0--L12 and DPT fusion stages F1--F4. The depth-change probe predicts the exact local depth changes, and the depth
+probe predicts depth. Each is fitted on 1200 of the scenes and calibrated by dividing its slopes and $\Gamma$ by the
+share of the exact slope it recovers on the other 300. The \textit{attention cut} stops every token of Depth Anything
+V2, in every encoder block, from attending to junction $j$'s ${\sim}88$ tokens on the intact image. The decoder still
+uses them. The \textit{matched heads} are DPT decoders on frozen DA-S with an occlusion-edge channel, trained on 1400
+of the scenes (100 to validate, two seeds each). They share data and schedule and differ only in the output and its
+loss. The depth head outputs depth (its loss also matches depth changes), and the depth-change head outputs local
+depth changes. Both see the whole image. On a head's
+output, $\Gamma$ skips the pixels the head marks as edges. A least-squares fit with the loop cut at junction $k$ gives
+the head's candidate for object $k$.
+
+\section{Results}\label{sec:res}
+\paragraph{Network outputs.}
+No network cuts the loop (Fig.~\ref{fig:main}a). The total excess tear on the impossible image is $-0.19$ to $0.32$.
+The mean bar slope is reversed in 0.96--1.00 of impossible images. On
+controls it has the right sign in 0.92--1.00 for DA-S/B/L and Lotus-D and in 0.31--0.79 for the other six. The
+networks tell a valid object from the impossible image junction by junction. A control's gap shows because the
+near bar ends in front of the far one. All ${\sim}3{,}500$ pixels that differ from the impossible image lie at this
+gap. The networks put their largest jump there in 0.88--1.00 of controls. In the impossible image every junction looks
+joined, as in a valid object in the special view.
+
+\paragraph{Erasure and closed rings.}
+Erasing one junction of the Penrose loop grows the jump there by 2.13--5.16 bar changes ($T=3$, Fig.~\ref{fig:main}b),
+and most bars regain the right sign \mbox{(0.58--1.00)}. Since the erased image is pixel-identical to an erased control, the
+network cannot know which it sees. So the closed loop reverses the bars. The closed rings
+are mostly read correctly (0.66--1.00 of the bars). Erasing a ring junction grows its jump by only 0.02--0.37, so the renders do not cause the reversal.
+
+\paragraph{Layer probes.}
+In DA-S and DA-B the depth-change probe finds almost no bar slope before block L6 (Fig.~\ref{fig:main}c), so the network computes the slopes that the probe finds later. From L7 to F1 the probe keeps the bars near their control's slope
+($\rho=0.96$--$1.27$). Its $\Gamma$ is $1.08$--$1.28\,T$, as on the controls, and at most $0.31\,T$ on the rings. The
+probe bends the bars at F4. The depth probe bends them at \mbox{L8--L12} ($\rho=0.10$--$0.91$) and in the decoder flattens
+them (DA-B, ${\le}0.39$) or reverses them (DA-S, $-0.68$ to $-0.81$). On bar pixels identical in the impossible image
+and its control, the tokens differ by 0.16--0.47 of their spread (L7--L12). There the depth-change
+probe stays within 6\% of its value on the control (L8--L12). The depth probe falls to 0.28--0.69 of it.
+The surface-normal networks also keep the bars' sign ($\rho=0.82$--$0.99$), but their depth twins reverse it.
+
+\paragraph{Least-squares gluing.}
+Gluing a network's outputs on the three erased images predicts its intact output with median Pearson $r=0.65$--$0.91$
+(eight networks). The mean of the objects gives $0.16$--$0.66$, and the best object per image gives $0.50$--$0.76$. We
+also tried junction weights from 0.01 to 100. Weight 1, the same as for bar links, fits best or within 0.002 of the
+best. In all eight, junction links read larger changes than bar links, so the bars reverse.
+
+\paragraph{Attention cut.}
+On the intact image we measure only the cubes that erasure leaves visible. The tokens of $j$ still attend to all tokens. In \mbox{DA-S/B/L} the attention cut tears at $j$ (\mbox{$e_j=0.92$--$1.13$}, or $0.59$--$0.85$ counting $j$'s cubes),
+and the bars regain the right sign \mbox{(0.74--1.00)}. At a joined junction of a control it gives only \mbox{$e=0.21$--$0.35$} (the
+disturbance from the cut). So the mean $e$ of an image's three cuts separates impossible images from controls (AUC
+1.00, with known junctions).
+
+\paragraph{Matched heads.}
+The depth-change head's bars sum to $\Gamma=0.96\,T$ around the loop and to $0.00$ around the rings
+(Fig.~\ref{fig:main}d). Cutting its loop at junction $k$ gives the profile closest to object $k$ in every image. For a
+depth map every cut gives the same profile, so its share is 1/3. The head does not show which junctions are joined.
+Its edge channel leaves the loop closed on all 48 possible controls too, so $|\Gamma|$ cannot tell them from
+impossible images (AUC 0.56--0.60). The depth networks tell them apart, as they find the controls' gaps. A depth map's
+changes sum to 0 around any loop, so a depth head can only replace the bend with a cut. Trained in-domain like the
+probes, our depth head is weak on bars even on controls (0.09--0.11 of the exact slope), and it flattens them. On the
+impossible image they keep 0.39--0.47 of their slope on its controls (depth-change head: 1.00--1.01). At an impossible junction it makes only its ordinary step (median largest $e$: $0.06$, $-0.08$ for the
+two seeds), at an erased junction it tears ($e_j=1.27$, $1.44$), and it finds the gap in 0.75--0.83 of controls.
+DA-S's own decoder, on the same encoder, reverses the bars ($\rho=-0.97$, filled star in Fig.~\ref{fig:main}c).
+
+\section{Discussion}\label{sec:disc}
+A linear read-out of a network can get every junction and bar of this figure right. No depth map can represent
+the figure, so a depth network must distort it. People also read the loop as closed~\cite{kulpa1983impossible} and still call the
+figure impossible~\cite{penrose1958impossible}. Our depth-change head does the first. Its edge channel does not show
+which junctions are joined. A network that outputs depth changes and a map of where the surface is joined could do both.
+
+\paragraph{Limitations.}
+We test only orthographic renders of one figure at one mismatch size, out of distribution for every network. We use linear probes on
+two networks and heads on one backbone (two seeds).
+
+\paragraph{Use of AI tools.} Claude assisted us with parts of the code and with drafting the text; we checked and approved all of it.
+
+\clearpage
+{\small
+\bibliographystyle{plainnat}
+\bibliography{refs}
+}
+\end{document}

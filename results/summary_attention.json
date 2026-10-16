@@ -1,0 +1,413 @@
+{
+ "dav2-b": {
+  "attn": {
+   "full": {
+    "impossible_intact": {
+     "sum_e": [
+      0.03725651837242271,
+      -0.0047498101012083405,
+      0.11539942606900576
+     ],
+     "reversed": 0.9618055555555556,
+     "best_corr": 0.742379004871019,
+     "n": 288
+    },
+    "impossible_erased": {
+     "e_erased": [
+      0.8493043168651049,
+      0.744136260855394,
+      0.9308326330176844
+     ],
+     "abs_e_visible": 0.08987211236679321,
+     "top_at_erased": 1.0,
+     "bars_with_objects": 0.7986111111111112,
+     "recovered_object": 1.0,
+     "n": 864
+    },
+    "control_erased": {
+     "e_gap_other_erased": 0.7261694386873891,
+     "e_erased_ordinary": 0.20470969140716155,
+     "e_gap_erased": 0.8653938093532245,
+     "top_stays_at_gap": 1.0,
+     "n": 144
+    },
+    "score": {
+     "impossible": 0.8625157659044764,
+     "control": 0.09655918908857855,
+     "auc": 1.0,
+     "moved_impossible": 1.0,
+     "moved_control": 0.3333333333333333,
+     "n_impossible": 288,
+     "n_control": 48
+    }
+   },
+   "hole": {
+    "impossible_intact": {
+     "sum_e": [
+      0.03725651837242271,
+      -0.0047498101012083405,
+      0.11539942606900576
+     ],
+     "reversed": 0.9618055555555556,
+     "best_corr": 0.742379004871019,
+     "n": 288
+    },
+    "impossible_erased": {
+     "e_erased": [
+      1.1321744186471707,
+      1.0233120654182908,
+      1.220743272177267
+     ],
+     "abs_e_visible": 0.04507316464465837,
+     "top_at_erased": 1.0,
+     "bars_with_objects": 0.9872685185185185,
+     "recovered_object": 1.0,
+     "n": 864
+    },
+    "control_erased": {
+     "e_gap_other_erased": 0.7157302277458395,
+     "e_erased_ordinary": 0.27407569294986167,
+     "e_gap_erased": 1.0824557202353304,
+     "top_stays_at_gap": 0.9895833333333334,
+     "n": 144
+    },
+    "score": {
+     "impossible": 1.1434830045416586,
+     "control": 0.2192700765324248,
+     "auc": 1.0,
+     "moved_impossible": 1.0,
+     "moved_control": 0.34027777777777773,
+     "n_impossible": 288,
+     "n_control": 48
+    }
+   },
+   "rho_full": {
+    "intact": -0.5059826675690982,
+    "cut": 0.50273712775966
+   },
+   "rho_hole": {
+    "intact": -0.5059826675690982,
+    "cut": 1.1265077547058922
+   },
+   "n_tok": 88.0,
+   "pixel": {
+    "impossible_intact": {
+     "sum_e": [
+      0.03733673133046596,
+      -0.004688397578294853,
+      0.11535180826795896
+     ],
+     "reversed": 0.9618055555555556,
+     "best_corr": 0.7424147882063419,
+     "n": 288
+    },
+    "impossible_erased": {
+     "e_erased": [
+      1.9756006774395052,
+      1.8624144322647043,
+      2.104061912670651
+     ],
+     "abs_e_visible": 0.062053866494107476,
+     "top_at_erased": 1.0,
+     "bars_with_objects": 1.0,
+     "recovered_object": 1.0,
+     "n": 864
+    },
+    "control_erased": {
+     "e_gap_other_erased": 0.7390388328729685,
+     "e_erased_ordinary": 0.8658439937769514,
+     "e_gap_erased": 1.7667394574539528,
+     "top_stays_at_gap": 0.3854166666666667,
+     "n": 144
+    },
+    "score": {
+     "impossible": 1.9467339500087384,
+     "control": 0.8568999077467245,
+     "auc": 1.0,
+     "moved_impossible": 1.0,
+     "moved_control": 0.7430555555555555,
+     "n_impossible": 288,
+     "n_control": 48
+    }
+   },
+   "rho_pixel": {
+    "intact": -0.5060554124844787,
+    "cut": 2.5096542376474673
+   }
+  }
+ },
+ "dav2-l": {
+  "attn": {
+   "full": {
+    "impossible_intact": {
+     "sum_e": [
+      0.04046619132941769,
+      -0.0024570142274637904,
+      0.11114183447249557
+     ],
+     "reversed": 0.9826388888888888,
+     "best_corr": 0.5821347359799129,
+     "n": 288
+    },
+    "impossible_erased": {
+     "e_erased": [
+      0.7715932045050401,
+      0.7217505337864781,
+      0.8231350364878276
+     ],
+     "abs_e_visible": 0.048477866801758064,
+     "top_at_erased": 1.0,
+     "bars_with_objects": 0.9768518518518519,
+     "recovered_object": 1.0,
+     "n": 864
+    },
+    "control_erased": {
+     "e_gap_other_erased": 0.6811186916862927,
+     "e_erased_ordinary": 0.1704552810141865,
+     "e_gap_erased": 0.8840246511303974,
+     "top_stays_at_gap": 1.0,
+     "n": 144
+    },
+    "score": {
+     "impossible": 0.7804814487866442,
+     "control": 0.08167094726068123,
+     "auc": 1.0,
+     "moved_impossible": 1.0,
+     "moved_control": 0.3333333333333333,
+     "n_impossible": 288,
+     "n_control": 48
+    }
+   },
+   "hole": {
+    "impossible_intact": {
+     "sum_e": [
+      0.04046619132941769,
+      -0.0024570142274637904,
+      0.11114183447249557
+     ],
+     "reversed": 0.9826388888888888,
+     "best_corr": 0.5821347359799129,
+     "n": 288
+    },
+    "impossible_erased": {
+     "e_erased": [
+      0.92917555012644,
+      0.8644030330201598,
+      0.9886309182246529
+     ],
+     "abs_e_visible": 0.027385090921964075,
+     "top_at_erased": 1.0,
+     "bars_with_objects": 1.0,
+     "recovered_object": 1.0,
+     "n": 864
+    },
+    "control_erased": {
+     "e_gap_other_erased": 0.676028635201153,
+     "e_erased_ordinary": 0.21444951299551948,
+     "e_gap_erased": 0.9846423736596226,
+     "top_stays_at_gap": 0.9895833333333334,
+     "n": 144
+    },
+    "score": {
+     "impossible": 0.9281731551257284,
+     "control": 0.1457703835793826,
+     "auc": 1.0,
+     "moved_impossible": 1.0,
+     "moved_control": 0.34027777777777773,
+     "n_impossible": 288,
+     "n_control": 48
+    }
+   },
+   "rho_full": {
+    "intact": -0.21452658049257245,
+    "cut": 0.6000533995141664
+   },
+   "rho_hole": {
+    "intact": -0.21452658049257245,
+    "cut": 0.8881999402778582
+   },
+   "n_tok": 88.0,
+   "pixel": {
+    "impossible_intact": {
+     "sum_e": [
+      0.04046619132941769,
+      -0.0024570142274637904,
+      0.11114183447249557
+     ],
+     "reversed": 0.9826388888888888,
+     "best_corr": 0.5821347359799129,
+     "n": 288
+    },
+    "impossible_erased": {
+     "e_erased": [
+      1.5107488678516412,
+      1.390842598672544,
+      1.6508606731305537
+     ],
+     "abs_e_visible": 0.03515957980114105,
+     "top_at_erased": 1.0,
+     "bars_with_objects": 1.0,
+     "recovered_object": 1.0,
+     "n": 864
+    },
+    "control_erased": {
+     "e_gap_other_erased": 0.6253747503715221,
+     "e_erased_ordinary": 0.8245714321287824,
+     "e_gap_erased": 1.5171016337896543,
+     "top_stays_at_gap": 0.125,
+     "n": 144
+    },
+    "score": {
+     "impossible": 1.4628805419284183,
+     "control": 0.7485965865666007,
+     "auc": 1.0,
+     "moved_impossible": 1.0,
+     "moved_control": 0.9166666666666666,
+     "n_impossible": 288,
+     "n_control": 48
+    }
+   },
+   "rho_pixel": {
+    "intact": -0.21452658049257245,
+    "cut": 1.7105779079603058
+   }
+  }
+ },
+ "dav2-s": {
+  "attn": {
+   "full": {
+    "impossible_intact": {
+     "sum_e": [
+      -0.017797380654621685,
+      -0.08258482530054562,
+      0.06648970749088362
+     ],
+     "reversed": 1.0,
+     "best_corr": 0.5481211149150316,
+     "n": 288
+    },
+    "impossible_erased": {
+     "e_erased": [
+      0.5939402079250453,
+      0.5171864775751117,
+      0.7004863979747377
+     ],
+     "abs_e_visible": 0.13056959377642896,
+     "top_at_erased": 0.9965277777777778,
+     "bars_with_objects": 0.29398148148148145,
+     "recovered_object": 0.9907407407407407,
+     "n": 864
+    },
+    "control_erased": {
+     "e_gap_other_erased": 0.776312679185944,
+     "e_erased_ordinary": 0.25571612396672994,
+     "e_gap_erased": 0.6682556932487811,
+     "top_stays_at_gap": 1.0,
+     "n": 144
+    },
+    "score": {
+     "impossible": 0.617211616340757,
+     "control": 0.06132114021293185,
+     "auc": 0.9984809027777778,
+     "moved_impossible": 0.9965277777777778,
+     "moved_control": 0.3333333333333333,
+     "n_impossible": 288,
+     "n_control": 48
+    }
+   },
+   "hole": {
+    "impossible_intact": {
+     "sum_e": [
+      -0.017797380654621685,
+      -0.08258482530054562,
+      0.06648970749088362
+     ],
+     "reversed": 1.0,
+     "best_corr": 0.5481211149150316,
+     "n": 288
+    },
+    "impossible_erased": {
+     "e_erased": [
+      0.9214309700662978,
+      0.8480316030580668,
+      1.006152398544654
+     ],
+     "abs_e_visible": 0.07317300494750348,
+     "top_at_erased": 0.9988425925925926,
+     "bars_with_objects": 0.7372685185185185,
+     "recovered_object": 0.9907407407407407,
+     "n": 864
+    },
+    "control_erased": {
+     "e_gap_other_erased": 0.7880691884130565,
+     "e_erased_ordinary": 0.352281079871235,
+     "e_gap_erased": 1.0051436273487537,
+     "top_stays_at_gap": 0.9791666666666666,
+     "n": 144
+    },
+    "score": {
+     "impossible": 0.9454240690164415,
+     "control": 0.23593235399985782,
+     "auc": 0.9991319444444444,
+     "moved_impossible": 0.9988425925925924,
+     "moved_control": 0.34722222222222215,
+     "n_impossible": 288,
+     "n_control": 48
+    }
+   },
+   "rho_full": {
+    "intact": -1.042700067434759,
+    "cut": -0.47348325039175543
+   },
+   "rho_hole": {
+    "intact": -1.042700067434759,
+    "cut": 0.5131413852915571
+   },
+   "n_tok": 88.0,
+   "pixel": {
+    "impossible_intact": {
+     "sum_e": [
+      -0.01787271241304481,
+      -0.0827254811923342,
+      0.06647788383223484
+     ],
+     "reversed": 1.0,
+     "best_corr": 0.5481682873336831,
+     "n": 288
+    },
+    "impossible_erased": {
+     "e_erased": [
+      1.645052459874118,
+      1.515848093866292,
+      1.746889621518555
+     ],
+     "abs_e_visible": 0.08227917917334557,
+     "top_at_erased": 1.0,
+     "bars_with_objects": 0.9918981481481481,
+     "recovered_object": 0.9942129629629629,
+     "n": 864
+    },
+    "control_erased": {
+     "e_gap_other_erased": 0.7941845920105168,
+     "e_erased_ordinary": 0.777158343528348,
+     "e_gap_erased": 1.3911351457196832,
+     "top_stays_at_gap": 0.5208333333333334,
+     "n": 144
+    },
+    "score": {
+     "impossible": 1.730747486113708,
+     "control": 0.6762992043958727,
+     "auc": 0.9853153935185186,
+     "moved_impossible": 1.0,
+     "moved_control": 0.6527777777777778,
+     "n_impossible": 288,
+     "n_control": 48
+    }
+   },
+   "rho_pixel": {
+    "intact": -1.0421893978008878,
+    "cut": 2.4925950186348786
+   }
+  }
+ }
+}

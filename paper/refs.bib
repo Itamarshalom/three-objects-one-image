@@ -1,0 +1,327 @@
+% refs.bib -- the works the report cites, each verified against arXiv / venue pages / Crossref
+% (24-25/09/2026 and 15-16/10/2026).
+% Each entry: "% verified: <url>" (title, authors, year, venue checked there).
+% plainnat sentence-cases titles, so proper nouns and acronyms in titles are braced.
+% plainnat ignores eprint/archivePrefix, so arXiv-only entries also carry howpublished.
+
+%% ---------------- depth networks ----------------
+
+% verified: https://proceedings.neurips.cc/paper_files/paper/2024/hash/26cfdcd8fe6fd75cc53e92963a656c58-Abstract-Conference.html ; https://arxiv.org/abs/2406.09414
+@inproceedings{yang2024dav2,
+  title     = {{Depth Anything V2}},
+  author    = {Yang, Lihe and Kang, Bingyi and Huang, Zilong and Zhao, Zhen and Xu, Xiaogang and Feng, Jiashi and Zhao, Hengshuang},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2024},
+  note      = {arXiv:2406.09414}
+}
+
+% verified: https://arxiv.org/abs/1907.01341 ; https://doi.org/10.1109/TPAMI.2020.3019967 (Crossref: vol 44, no 3, 2022)
+@article{ranftl2022midas,
+  title   = {Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-Shot Cross-Dataset Transfer},
+  author  = {Ranftl, Ren{\'e} and Lasinger, Katrin and Hafner, David and Schindler, Konrad and Koltun, Vladlen},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  volume  = {44},
+  number  = {3},
+  pages   = {1623--1637},
+  year    = {2022},
+  doi     = {10.1109/TPAMI.2020.3019967}
+}
+
+% verified: https://arxiv.org/abs/2103.13413 ; https://doi.org/10.1109/ICCV48922.2021.01196 (Crossref)
+% pages are the Crossref/IEEE ones; the CVF open-access page gives 12179--12188
+@inproceedings{ranftl2021dpt,
+  title     = {Vision Transformers for Dense Prediction},
+  author    = {Ranftl, Ren{\'e} and Bochkovskiy, Alexey and Koltun, Vladlen},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pages     = {12159--12168},
+  year      = {2021},
+  doi       = {10.1109/ICCV48922.2021.01196}
+}
+
+% verified: https://arxiv.org/abs/2302.12288 (no venue on arXiv, DBLP key journals/corr/abs-2302-12288 via Semantic Scholar; cited as arXiv)
+@misc{bhat2023zoedepth,
+  title         = {{ZoeDepth}: Zero-shot Transfer by Combining Relative and Metric Depth},
+  author        = {Bhat, Shariq Farooq and Birkl, Reiner and Wofk, Diana and Wonka, Peter and M{\"u}ller, Matthias},
+  howpublished  = {arXiv preprint arXiv:2302.12288},
+  year          = {2023},
+  eprint        = {2302.12288},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV}
+}
+
+% verified: https://arxiv.org/abs/2112.10752 (comment: "CVPR 2022") ; https://doi.org/10.1109/CVPR52688.2022.01042 (Crossref)
+% pages are the Crossref/IEEE ones; the CVF open-access page gives 10684--10695
+@inproceedings{rombach2022ldm,
+  title     = {High-Resolution Image Synthesis with Latent Diffusion Models},
+  author    = {Rombach, Robin and Blattmann, Andreas and Lorenz, Dominik and Esser, Patrick and Ommer, Bj{\"o}rn},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {10674--10685},
+  year      = {2022},
+  doi       = {10.1109/CVPR52688.2022.01042}
+}
+
+% verified: https://arxiv.org/abs/2312.02145 ; https://doi.org/10.1109/CVPR52733.2024.00907 (Crossref)
+@inproceedings{ke2024marigold,
+  title     = {Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation},
+  author    = {Ke, Bingxin and Obukhov, Anton and Huang, Shengyu and Metzger, Nando and Caye Daudt, Rodrigo and Schindler, Konrad},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {9492--9502},
+  year      = {2024}
+}
+
+% verified: https://arxiv.org/abs/2505.09358 (journal extension) ; https://doi.org/10.1109/TPAMI.2025.3591076 (Crossref: TPAMI 2025, pp. 1-18,
+% early access, no volume/issue assigned yet)
+@article{ke2025marigold,
+  title   = {{Marigold}: Affordable Adaptation of Diffusion-Based Image Generators for Image Analysis},
+  author  = {Ke, Bingxin and Qu, Kevin and Wang, Tianfu and Metzger, Nando and Huang, Shengyu and Li, Bo and Obukhov, Anton and Schindler, Konrad},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  pages   = {1--18},
+  year    = {2025},
+  doi     = {10.1109/TPAMI.2025.3591076}
+}
+
+% verified: https://iclr.cc/virtual/2025/poster/28092 ; https://arxiv.org/abs/2409.18124
+@inproceedings{he2025lotus,
+  title     = {{Lotus}: Diffusion-based Visual Foundation Model for High-quality Dense Prediction},
+  author    = {He, Jing and Li, Haodong and Yin, Wei and Liang, Yixun and Li, Leheng and Zhou, Kaiqiang and Zhang, Hongbo and Liu, Bingbing and Chen, Ying-Cong},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2025},
+  note      = {arXiv:2409.18124}
+}
+
+% verified: https://openaccess.thecvf.com/content/WACV2025/html/Garcia_Fine-Tuning_Image-Conditional_Diffusion_Models_is_Easier_than_You_Think_WACV_2025_paper.html ; https://arxiv.org/abs/2409.11355
+% note: arXiv lists "Karim Knaebel"; the WACV/CVF page and Crossref list "Karim Abou Zeid" (venue version used)
+@inproceedings{garcia2025finetuning,
+  title     = {Fine-Tuning Image-Conditional Diffusion Models is Easier than You Think},
+  author    = {Martin Garcia, Gonzalo and Abou Zeid, Karim and Schmidt, Christian and de Geus, Daan and Hermans, Alexander and Leibe, Bastian},
+  booktitle = {Proceedings of the Winter Conference on Applications of Computer Vision (WACV)},
+  pages     = {753--762},
+  year      = {2025}
+}
+
+%% ---------------- probing depth networks; illusions ----------------
+
+% verified: https://openaccess.thecvf.com/content_ICCV_2019/html/van_Dijk_How_Do_Neural_Networks_See_Depth_in_Single_Images_ICCV_2019_paper.html ; https://arxiv.org/abs/1905.07005
+@inproceedings{vandijk2019how,
+  title     = {How Do Neural Networks See Depth in Single Images?},
+  author    = {van Dijk, Tom and de Croon, Guido},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pages     = {2183--2191},
+  year      = {2019}
+}
+
+% verified: https://doi.org/10.1109/CVPR52733.2024.02059 (Crossref) ; https://arxiv.org/abs/2404.08636
+@inproceedings{elbanani2024probing,
+  title     = {Probing the {3D} Awareness of Visual Foundation Models},
+  author    = {El Banani, Mohamed and Raj, Amit and Maninis, Kevis-Kokitsi and Kar, Abhishek and Li, Yuanzhen and
+               Rubinstein, Michael and Sun, Deqing and Guibas, Leonidas and Johnson, Justin and Jampani, Varun},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {21795--21806},
+  year      = {2024},
+  doi       = {10.1109/CVPR52733.2024.02059}
+}
+
+% verified: https://doi.org/10.1109/CVPR52734.2025.01867 (Crossref) ; https://arxiv.org/abs/2411.17385
+@inproceedings{danier2025depthcues,
+  title     = {{DepthCues}: Evaluating Monocular Depth Perception in Large Vision Models},
+  author    = {Danier, D. and Ayg{\"u}n, M. and Li, C. and Bilen, H. and Mac Aodha, O.},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {20049--20059},
+  year      = {2025},
+  doi       = {10.1109/CVPR52734.2025.01867}
+}
+
+% verified: https://pair-code.github.io/depth-maps-art-and-illusions/art_history_vis/blogpost/blogpost_2.html
+% page is undated; year from the GitHub history of blogpost_2.html (commits 2019-11-08 to 2019-11-21),
+% https://github.com/PAIR-code/depth-maps-art-and-illusions/commits/master/art_history_vis/blogpost/blogpost_2.html
+@misc{jiang2019illusions,
+  title        = {Illusions for Depth Models and Illusions for Humans},
+  author       = {Jiang, Ellen and Reif, Emily and Kim, Been},
+  howpublished = {Google PAIR blog post, \url{https://pair-code.github.io/depth-maps-art-and-illusions/art_history_vis/blogpost/blogpost_2.html}},
+  year         = {2019},
+  note         = {Accessed 24 Sep 2026}
+}
+
+% verified: https://arxiv.org/abs/2505.13061 (comment: NeurIPS 2025); https://neurips.cc/virtual/2025/poster/115511
+@inproceedings{yao2025illusion,
+  title     = {{3D} Visual Illusion Depth Estimation},
+  author    = {Yao, Chengtang and Liu, Zhidan and Zeng, Jiaxi and Yu, Lidong and Wu, Yuwei and Jia, Yunde},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2025},
+  note      = {arXiv:2505.13061}
+}
+
+% verified: https://arxiv.org/abs/2512.15423 (v2 comment: "Accepted to ECCV 2026")
+@inproceedings{nguyen2026mirage,
+  title     = {The {3D Mirage}: Probing and Taming {3D} Hallucinations},
+  author    = {Nguyen, Hoang and Xu, Xiaohao and Huang, Xiaonan},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026},
+  note      = {arXiv:2512.15423}
+}
+
+% verified: https://doi.org/10.1016/j.visres.2021.09.004 (Crossref)
+@article{heinke2021failure,
+  title   = {A Failure to Learn Object Shape Geometry: Implications for Convolutional Neural Networks as Plausible Models of Biological Vision},
+  author  = {Heinke, Dietmar and Wachman, Peter and van Zoest, Wieske and Leek, E. Charles},
+  journal = {Vision Research},
+  volume  = {189},
+  pages   = {81--92},
+  year    = {2021},
+  doi     = {10.1016/j.visres.2021.09.004}
+}
+
+%% ---------------- impossible figures ----------------
+
+% verified: https://doi.org/10.1111/j.2044-8295.1958.tb00634.x (Crossref)
+@article{penrose1958impossible,
+  title   = {Impossible Objects: A Special Type of Visual Illusion},
+  author  = {Penrose, Lionel S. and Penrose, Roger},
+  journal = {British Journal of Psychology},
+  volume  = {49},
+  number  = {1},
+  pages   = {31--33},
+  year    = {1958},
+  doi     = {10.1111/j.2044-8295.1958.tb00634.x}
+}
+
+% verified: https://cir.nii.ac.jp/crid/1574231874229998208 ; https://www.semanticscholar.org/paper/Impossible-objects-as-nonsense-sentences-Huffman/d17ae64c1765bbe60f1d725359cc76bfc3f76ac1
+@incollection{huffman1971impossible,
+  title     = {Impossible Objects as Nonsense Sentences},
+  author    = {Huffman, David A.},
+  booktitle = {Machine Intelligence 6},
+  editor    = {Meltzer, Bernard and Michie, Donald},
+  publisher = {Edinburgh University Press},
+  pages     = {295--323},
+  year      = {1971}
+}
+
+% verified: https://www.sciencedirect.com/science/article/abs/pii/0004370271900051
+@article{clowes1971seeing,
+  title   = {On Seeing Things},
+  author  = {Clowes, Maxwell B.},
+  journal = {Artificial Intelligence},
+  volume  = {2},
+  number  = {1},
+  pages   = {79--116},
+  year    = {1971}
+}
+
+% verified: https://doi.org/10.1016/0165-1684(83)90069-5 (Crossref)
+@article{kulpa1983impossible,
+  title   = {Are Impossible Figures Possible?},
+  author  = {Kulpa, Z.},
+  journal = {Signal Processing},
+  volume  = {5},
+  number  = {3},
+  pages   = {201--220},
+  year    = {1983},
+  doi     = {10.1016/0165-1684(83)90069-5}
+}
+
+% verified: https://doi.org/10.2307/1575844 (Crossref: Leonardo 25(3/4), start page 245; pages 245-247 per Semantic Scholar)
+@article{penrose1992cohomology,
+  title   = {On the Cohomology of Impossible Figures},
+  author  = {Penrose, Roger},
+  journal = {Leonardo},
+  volume  = {25},
+  number  = {3/4},
+  pages   = {245--247},
+  year    = {1992},
+  doi     = {10.2307/1575844}
+}
+
+% verified: https://doi.org/10.1007/978-3-540-46515-7_27 (Crossref) ; LNCS vol. 1763 per https://link.springer.com/book/10.1007/b75044 ;
+% editors per Crossref record of the book, https://doi.org/10.1007/b75044
+@inproceedings{sugihara2000impossible,
+  title     = {``{Impossible} Objects'' Are Not Necessarily Impossible -- Mathematical Study on Optical Illusion},
+  author    = {Sugihara, Kokichi},
+  booktitle = {Discrete and Computational Geometry (JCDCG 1998)},
+  editor    = {Akiyama, Jin and Kano, Mikio and Urabe, Masatsugu},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {1763},
+  publisher = {Springer},
+  pages     = {305--316},
+  year      = {2000},
+  doi       = {10.1007/978-3-540-46515-7_27}
+}
+
+% verified: https://www.nature.com/articles/368542a0
+@article{freeman1994generic,
+  title   = {The generic viewpoint assumption in a framework for visual perception},
+  author  = {Freeman, William T.},
+  journal = {Nature},
+  volume  = {368},
+  number  = {6471},
+  pages   = {542--545},
+  year    = {1994}
+}
+
+% verified: https://arxiv.org/abs/2312.17046 (no peer-reviewed version found; cited as arXiv)
+@misc{akleman2023inconsistent,
+  title         = {Representing and Modeling Inconsistent, Impossible, and Incoherent Shapes and Scenes with {2D} Non-Conservative Vector Fields mapped on 2-Complexes},
+  author        = {Akleman, E. and Wang, Y. and Gonen, O.},
+  howpublished  = {arXiv preprint arXiv:2312.17046},
+  year          = {2023},
+  eprint        = {2312.17046},
+  archivePrefix = {arXiv}
+}
+
+% verified: https://doi.org/10.1145/3731422 (Crossref: TOG 44(4)); https://arxiv.org/abs/2605.14960
+@article{dodik2025meschers,
+  title   = {{Meschers}: Geometry Processing of Impossible Objects},
+  author  = {Dodik, Ana and Yu, Isabella and Chandra, Kartik and Ragan-Kelley, Jonathan and Tenenbaum, Joshua and Sitzmann, Vincent and Solomon, Justin},
+  journal = {ACM Transactions on Graphics},
+  volume  = {44},
+  number  = {4},
+  year    = {2025},
+  doi     = {10.1145/3731422}
+}
+
+%% ---------------- integrating depth from gradients and normals ----------------
+
+% verified: https://doi.org/10.1109/34.3909 (Crossref)
+@article{frankot1988enforcing,
+  title   = {A Method for Enforcing Integrability in Shape from Shading Algorithms},
+  author  = {Frankot, R. T. and Chellappa, R.},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  volume  = {10},
+  number  = {4},
+  pages   = {439--451},
+  year    = {1988},
+  doi     = {10.1109/34.3909}
+}
+
+% verified: https://doi.org/10.1007/11744023_45 (Crossref; also MERL TR2006-021)
+@inproceedings{agrawal2006range,
+  title     = {What Is the Range of Surface Reconstructions from a Gradient Field?},
+  author    = {Agrawal, A. and Raskar, R. and Chellappa, R.},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {3951},
+  pages     = {578--591},
+  year      = {2006},
+  doi       = {10.1007/11744023_45}
+}
+
+% verified: https://doi.org/10.1109/CVPR.2009.5206603 (Crossref)
+@inproceedings{reddy2009enforcing,
+  title     = {Enforcing Integrability by Error Correction Using {L1}-Minimization},
+  author    = {Reddy, D. and Agrawal, A. and Chellappa, R.},
+  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {2350--2357},
+  year      = {2009},
+  doi       = {10.1109/CVPR.2009.5206603}
+}
+
+% verified: https://doi.org/10.1007/s10851-017-0773-x (Crossref) ; https://arxiv.org/abs/1709.05940
+@article{queau2018survey,
+  title   = {Normal Integration: A Survey},
+  author  = {Qu{\'e}au, Y. and Durou, J.-D. and Aujol, J.-F.},
+  journal = {Journal of Mathematical Imaging and Vision},
+  volume  = {60},
+  number  = {4},
+  pages   = {576--593},
+  year    = {2018},
+  doi     = {10.1007/s10851-017-0773-x}
+}
